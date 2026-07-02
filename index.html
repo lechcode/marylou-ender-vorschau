@@ -20,12 +20,17 @@
 <meta name="theme-color" content="#F4EAD9">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-<meta property="og:title" content="Mary Lou — zurück zu deiner eigenen Stimme">
+<meta property="og:title" content="Mary Lou — zurück zu dir selbst">
 <meta property="og:description" content="1:1-Begleitung, Retreats, Yoga, Sound Healing und Musik mit Mary Lou. Sanft, weiblich, farbenfroh.">
-<!-- HIER: og:image + og:url auf die echte Vorschau-/Live-URL setzen, sobald gehostet -->
-<meta property="og:image" content="assets/og.jpg">
+<!-- OG-URLs absolut auf die Vorschau-URL (Pflicht für WhatsApp/Social-Vorschau). Bei eigener Domain hier umstellen. -->
+<meta property="og:url" content="https://lechcode.github.io/marylou-ender-vorschau/">
+<meta property="og:image" content="https://lechcode.github.io/marylou-ender-vorschau/assets/og.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mary Lou — Zurück zu dir selbst. 1:1-Begleitung, Retreats, Yoga, Sound Healing und Musik.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lechcode.github.io/marylou-ender-vorschau/assets/og.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%234A2842'/%3E%3Cpath d='M18 8c-5 2-7 8-3.5 13 4-1 7.5-6.5 3.5-13Z' fill='%23E7C86A'/%3E%3Ccircle cx='9' cy='10' r='1.3' fill='%23E08BA0'/%3E%3C/svg%3E">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-500.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/karla-regular.woff2" crossorigin>
@@ -113,7 +118,7 @@ img,svg{display:block;max-width:100%}
 .hero .lede{max-width:48ch}
 .hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
 .hero-photo{position:relative}
-.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;border-radius:230px 230px var(--r-lg) var(--r-lg);box-shadow:0 30px 60px -26px rgba(74,40,66,.45);border:6px solid var(--cream)}
+.hero-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;border-radius:230px 230px var(--r-lg) var(--r-lg);box-shadow:0 30px 60px -26px rgba(74,40,66,.45);border:6px solid var(--cream)}
 .hero-photo::before{content:"";position:absolute;inset:-16px -16px auto auto;width:70%;height:70%;background:radial-gradient(circle,rgba(217,139,160,.4),transparent 70%);z-index:-1;filter:blur(6px)}
 .arc{fill:none;stroke-width:11;stroke-linecap:round;opacity:.5}
 .rainbow-rot{animation:spin 90s linear infinite;transform-origin:1120px 60px}
@@ -135,13 +140,11 @@ img,svg{display:block;max-width:100%}
 .js .karte:hover{transform:translateY(-5px);box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 30px 60px -30px rgba(74,40,66,.38)}
 .karte-media{position:relative;aspect-ratio:4/3;overflow:hidden}
 .karte-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
-.karte-badge{position:absolute;left:16px;bottom:-22px;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--tint,var(--clay));box-shadow:0 8px 20px -6px rgba(74,40,66,.5);z-index:1}
-.karte-badge svg{width:26px;height:26px;color:#fff}
 .karte.-begleitung{--tint:var(--rose-deep)}
 .karte.-retreats{--tint:var(--clay)}
 .karte.-yoga{--tint:var(--sage)}
 .karte.-sound{--tint:var(--lavender)}
-.karte-body{padding:34px clamp(18px,1.8vw,24px) clamp(18px,1.8vw,24px);display:flex;flex-direction:column;gap:9px;flex:1}
+.karte-body{padding:clamp(18px,1.8vw,24px);display:flex;flex-direction:column;gap:9px;flex:1}
 .karte h3{font-size:var(--h3)}
 .karte p{color:var(--ink-soft);font-size:15px;flex-grow:1}
 .karte .mehr{font-weight:700;font-size:13.5px;color:var(--tint,var(--clay));letter-spacing:.02em}
@@ -158,7 +161,7 @@ img,svg{display:block;max-width:100%}
 /* ÜBER */
 .ueber-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,68px);align-items:start}
 .ueber-figur{position:relative}
-.ueber-figur img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:var(--r-lg);box-shadow:var(--shadow);border:6px solid var(--cream)}
+.ueber-figur img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:var(--r-lg);box-shadow:var(--shadow);border:6px solid var(--cream)}
 .ueber-figur::after{content:"";position:absolute;inset:auto auto -14px -14px;width:44%;height:56%;border-left:2px solid var(--rose);border-bottom:2px solid var(--rose);border-radius:0 0 0 var(--r-lg);z-index:-1}
 .ueber-text p+p{margin-top:1em}.ueber-text .muted{color:var(--ink-soft)}
 .quali{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
@@ -261,8 +264,8 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#c9bcc4}footer a:h
   .navlinks a:not(.btn){font-size:23px;font-family:var(--serif);font-weight:600;color:var(--ink)}
   .menu-open .navlinks{transform:none}.burger{display:flex;z-index:45}
   .ueber-grid,.kontakt-grid,.hero-grid{grid-template-columns:1fr}
-  .hero-photo{max-width:340px;margin-inline:auto;order:-1}
-  .ueber-figur{max-width:340px;margin-inline:auto}
+  .hero-photo{max-width:215px;margin-inline:auto;order:-1}
+  .ueber-figur{max-width:235px;margin-inline:auto}
   .trust .wrap{grid-template-columns:1fr 1fr;gap:22px}
   .karten{grid-template-columns:1fr 1fr}
   .circles{grid-template-columns:1fr}
@@ -347,7 +350,6 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#c9bcc4}footer a:h
       <article class="karte -begleitung">
         <div class="karte-media">
           <img src="assets/spotify-cover.jpg" width="640" height="640" loading="lazy" decoding="async" style="object-position:55% 25%" alt="Mary Lou an einen Baum angelehnt — persönliche 1:1-Begleitung">
-          <span class="karte-badge" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 41s-13-8.4-13-18.2A7.2 7.2 0 0 1 24 19a7.2 7.2 0 0 1 13 3.8C37 32.6 24 41 24 41Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg></span>
         </div>
         <div class="karte-body">
           <h3>1:1-Begleitung</h3>
@@ -358,7 +360,6 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#c9bcc4}footer a:h
       <article class="karte -retreats">
         <div class="karte-media">
           <img src="assets/retreat-morocco.jpg" width="500" height="375" loading="lazy" decoding="async" alt="WE TREAT Retreat in Marokko — Yoga, Surf und Gemeinschaft">
-          <span class="karte-badge" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="17" r="7" stroke="currentColor" stroke-width="2.4"/><path d="M6 34c4-3 8-3 12 0s8 3 12 0 8-3 12 0M8 41c4-3 8-3 12 0s8 3 12 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
         </div>
         <div class="karte-body">
           <h3>Retreats</h3>
@@ -369,7 +370,6 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#c9bcc4}footer a:h
       <article class="karte -yoga">
         <div class="karte-media">
           <img src="assets/circle-yogapeace.jpg" width="500" height="375" loading="lazy" decoding="async" alt="Mary Lou in einer Yoga-Haltung im Garten">
-          <span class="karte-badge" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="11" r="4" stroke="currentColor" stroke-width="2.4"/><path d="M24 17c-6 2-11 8-13 18h26c-2-10-7-16-13-18Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 35h26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
         </div>
         <div class="karte-body">
           <h3>Yoga</h3>
@@ -380,7 +380,6 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#c9bcc4}footer a:h
       <article class="karte -sound">
         <div class="karte-media">
           <img src="assets/musik-youtube.jpg" width="500" height="375" loading="lazy" decoding="async" alt="Mary Lou in der Natur — Klang und Stimme beim Sound Healing">
-          <span class="karte-badge" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 24a16 7 0 0 0 32 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M13 24a11 4.5 0 0 1 22 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M24 12v3M18 14l1 3M30 14l-1 3" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
         </div>
         <div class="karte-body">
           <h3>Sound Healing</h3>

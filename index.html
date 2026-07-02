@@ -27,7 +27,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%234A2842'/%3E%3Cpath d='M18 8c-5 2-7 8-3.5 13 4-1 7.5-6.5 3.5-13Z' fill='%23E7C86A'/%3E%3Ccircle cx='9' cy='10' r='1.3' fill='%23E08BA0'/%3E%3C/svg%3E">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/fraunces-600.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-500.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/karla-regular.woff2" crossorigin>
 <link rel="stylesheet" href="assets/fonts.css">
 <style>
@@ -45,13 +45,14 @@
   --rainbow:linear-gradient(90deg,#E08BA0,#E8A87C,#E7C86A,#9FB584,#8F9AD1,#B08BC0);
   --line:rgba(61,43,51,.13); --line-strong:rgba(61,43,51,.22);
   --line-night:rgba(246,236,224,.18);
-  --serif:'Fraunces','Fraunces Fallback',Georgia,serif;
+  --serif:'Cormorant Garamond','Cormorant Fallback',Georgia,serif;
+  --script:'Nothing You Could Do','Segoe Script','Bradley Hand',cursive;
   --sans:'Karla','Karla Fallback',Arial,sans-serif;
   --s0:clamp(16px, .35vw + 15px, 17.5px);
   --s1:clamp(18px, .7vw + 15.5px, 21px);
-  --h3:clamp(20px, 1vw + 16px, 25px);
-  --h2:clamp(27px, 2vw + 18px, 40px);
-  --h1:clamp(34px, 3.6vw + 20px, 62px);
+  --h3:clamp(22px, 1.1vw + 17px, 29px);
+  --h2:clamp(30px, 2.4vw + 19px, 48px);
+  --h1:clamp(40px, 4.6vw + 22px, 76px);
   --maxw:1120px; --gut:clamp(20px, 5vw, 72px);
   --ease:cubic-bezier(.22,.61,.36,1); --r:16px; --r-lg:24px; --r-pill:999px;
   --shadow:0 1px 0 rgba(255,255,255,.6) inset, 0 18px 42px -26px rgba(74,40,66,.32);
@@ -59,8 +60,8 @@
 html{scroll-behavior:smooth;scroll-padding-top:80px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{background:var(--sand);color:var(--ink);font-family:var(--sans);font-size:var(--s0);line-height:1.68;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.014em;color:var(--ink);text-wrap:balance}
-h1 em,h2 em{font-style:italic;font-weight:400;color:var(--rose-deep)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:.002em;color:var(--ink);text-wrap:balance}
+h1 em,h2 em{font-family:var(--script);font-style:normal;font-weight:400;color:var(--rose-deep);font-size:1.06em;line-height:.85;display:inline-block}
 p{max-width:64ch}
 a{color:var(--grape);text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:3px}
@@ -89,7 +90,7 @@ img,svg{display:block;max-width:100%}
 .brand{display:flex;align-items:center;gap:10px;line-height:1.05}
 .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid var(--rose)}
 .brand .btxt{display:flex;flex-direction:column}
-.brand b{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:.01em;color:var(--ink)}
+.brand b{font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:.01em;color:var(--ink)}
 .brand span{font-family:var(--sans);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);margin-top:2px}
 .navlinks{display:flex;align-items:center;gap:26px}
 .navlinks a:not(.btn){font-size:14.5px;font-weight:700;color:var(--ink);position:relative}
@@ -132,13 +133,15 @@ img,svg{display:block;max-width:100%}
 .karten{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,22px);margin-top:42px}
 .karte{position:relative;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .js .karte:hover{transform:translateY(-5px);box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 30px 60px -30px rgba(74,40,66,.38)}
-.karte-icon{width:100%;aspect-ratio:16/10;background:var(--tint-soft,var(--sand-deep));display:grid;place-items:center}
-.karte-icon svg{width:52px;height:52px;color:var(--tint,var(--clay))}
-.karte.-begleitung{--tint:var(--rose-deep);--tint-soft:var(--blush-soft)}
-.karte.-retreats{--tint:var(--clay);--tint-soft:#F6E4D4}
-.karte.-yoga{--tint:var(--sage);--tint-soft:#E9EEDF}
-.karte.-sound{--tint:var(--lavender);--tint-soft:#ECE4F3}
-.karte-body{padding:clamp(18px,1.8vw,24px);display:flex;flex-direction:column;gap:9px;flex:1}
+.karte-media{position:relative;aspect-ratio:4/3;overflow:hidden}
+.karte-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.karte-badge{position:absolute;left:16px;bottom:-22px;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--tint,var(--clay));box-shadow:0 8px 20px -6px rgba(74,40,66,.5);z-index:1}
+.karte-badge svg{width:26px;height:26px;color:#fff}
+.karte.-begleitung{--tint:var(--rose-deep)}
+.karte.-retreats{--tint:var(--clay)}
+.karte.-yoga{--tint:var(--sage)}
+.karte.-sound{--tint:var(--lavender)}
+.karte-body{padding:34px clamp(18px,1.8vw,24px) clamp(18px,1.8vw,24px);display:flex;flex-direction:column;gap:9px;flex:1}
 .karte h3{font-size:var(--h3)}
 .karte p{color:var(--ink-soft);font-size:15px;flex-grow:1}
 .karte .mehr{font-weight:700;font-size:13.5px;color:var(--tint,var(--clay));letter-spacing:.02em}
@@ -148,7 +151,8 @@ img,svg{display:block;max-width:100%}
 .leit{background:var(--grape);color:#F3E7DE;text-align:center;position:relative;overflow:clip}
 .leit .wrap{max-width:860px;position:relative;z-index:1}
 .leit .eyebrow{color:#F0C7D2;justify-content:center}
-.leit blockquote{font-family:var(--serif);font-style:italic;font-size:var(--h2);line-height:1.4;color:#fff;margin-top:18px}
+.leit blockquote{font-family:var(--serif);font-style:normal;font-size:var(--h2);line-height:1.28;color:#fff;margin-top:18px}
+.leit blockquote em{font-family:var(--script);color:#F0C7D2;font-size:1.05em}
 .leit cite{display:block;margin-top:22px;font-style:normal;font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:#e6b9c6}
 .leit-band{position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--rainbow);opacity:.85}
 
@@ -343,8 +347,9 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#c9bcc4}footer a:h
     <div class="karten reveal">
       <article class="karte -begleitung">
         <span class="tag">Schwerpunkt</span>
-        <div class="karte-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none"><path d="M24 41s-13-8.4-13-18.2A7.2 7.2 0 0 1 24 19a7.2 7.2 0 0 1 13 3.8C37 32.6 24 41 24 41Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <div class="karte-media">
+          <img src="assets/portrait-ueber.jpg" width="640" height="480" loading="lazy" decoding="async" alt="Mary Lou lächelnd — persönliche 1:1-Begleitung">
+          <span class="karte-badge" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 41s-13-8.4-13-18.2A7.2 7.2 0 0 1 24 19a7.2 7.2 0 0 1 13 3.8C37 32.6 24 41 24 41Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg></span>
         </div>
         <div class="karte-body">
           <h3>1:1-Begleitung</h3>
@@ -354,8 +359,9 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#c9bcc4}footer a:h
       </article>
       <article class="karte -retreats">
         <span class="tag">Schwerpunkt</span>
-        <div class="karte-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="17" r="7" stroke="currentColor" stroke-width="2"/><path d="M6 34c4-3 8-3 12 0s8 3 12 0 8-3 12 0M8 41c4-3 8-3 12 0s8 3 12 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div class="karte-media">
+          <img src="assets/retreat-morocco.jpg" width="500" height="375" loading="lazy" decoding="async" alt="WE TREAT Retreat in Marokko — Yoga, Surf und Gemeinschaft">
+          <span class="karte-badge" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="17" r="7" stroke="currentColor" stroke-width="2.4"/><path d="M6 34c4-3 8-3 12 0s8 3 12 0 8-3 12 0M8 41c4-3 8-3 12 0s8 3 12 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
         </div>
         <div class="karte-body">
           <h3>Retreats</h3>
@@ -364,8 +370,9 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#c9bcc4}footer a:h
         </div>
       </article>
       <article class="karte -yoga">
-        <div class="karte-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="11" r="4" stroke="currentColor" stroke-width="2"/><path d="M24 17c-6 2-11 8-13 18h26c-2-10-7-16-13-18Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M11 35h26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div class="karte-media">
+          <img src="assets/circle-yogapeace.jpg" width="500" height="375" loading="lazy" decoding="async" alt="Mary Lou in einer Yoga-Haltung im Garten">
+          <span class="karte-badge" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="11" r="4" stroke="currentColor" stroke-width="2.4"/><path d="M24 17c-6 2-11 8-13 18h26c-2-10-7-16-13-18Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 35h26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
         </div>
         <div class="karte-body">
           <h3>Yoga</h3>
@@ -374,8 +381,9 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#c9bcc4}footer a:h
         </div>
       </article>
       <article class="karte -sound">
-        <div class="karte-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none"><path d="M8 24a16 7 0 0 0 32 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M13 24a11 4.5 0 0 1 22 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 12v3M18 14l1 3M30 14l-1 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div class="karte-media">
+          <img src="assets/musik-youtube.jpg" width="500" height="375" loading="lazy" decoding="async" alt="Mary Lou in der Natur — Klang und Stimme beim Sound Healing">
+          <span class="karte-badge" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 24a16 7 0 0 0 32 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M13 24a11 4.5 0 0 1 22 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M24 12v3M18 14l1 3M30 14l-1 3" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
         </div>
         <div class="karte-body">
           <h3>Sound Healing</h3>

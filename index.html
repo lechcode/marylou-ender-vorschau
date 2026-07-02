@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Marylou Ender · Musik, Retreats & 1:1-Begleitung
+  Mary Lou Ender · Musik, Retreats & 1:1-Begleitung
   AUFTRAG (echter Kunde) · Single-File, kein Build · erstellt von Lechcode · 02.07.2026
   Erste eigene Website (bisher nur Linktree/Instagram) — Texte neu geschrieben aus den Fakten
   von linktr.ee/maryloumusic + katharina-flows.com/we-treat-marocco-2026.
@@ -15,13 +15,13 @@
 <script>document.documentElement.classList.add('js');if(location.search.indexOf('foto')>-1)document.documentElement.classList.add('foto')</script>
 <!-- ENTFERNEN erst wenn Impressum vollständig (Anschrift+Telefon) & Datenschutz freigegeben sind, s. OFFENE-FRAGEN.md -->
 <meta name="robots" content="noindex, nofollow">
-<title>Musik, Retreats &amp; 1:1-Begleitung | Marylou Ender</title>
-<meta name="description" content="Marylou Ender begleitet dich mit Musik, Stimme und achtsamer Körperarbeit zurück zu dir selbst — Retreats, 1:1-Begleitung und Frauenkreise.">
+<title>Musik, Retreats &amp; 1:1-Begleitung | Mary Lou Ender</title>
+<meta name="description" content="Mary Lou Ender begleitet dich mit Musik, Stimme und achtsamer Körperarbeit zurück zu dir selbst — Retreats, 1:1-Begleitung und Frauenkreise.">
 <meta name="theme-color" content="#241A2E">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-<meta property="og:title" content="Marylou Ender — Finde deinen Weg zurück zur eigenen Stimme">
-<meta property="og:description" content="Musik, Retreats und 1:1-Begleitung mit Marylou Ender: Yin Yoga, Breathwork, Voice Activation und Frauenkreise.">
+<meta property="og:title" content="Mary Lou Ender — Finde deinen Weg zurück zur eigenen Stimme">
+<meta property="og:description" content="Musik, Retreats und 1:1-Begleitung mit Mary Lou Ender: Yin Yoga, Breathwork, Voice Activation und Frauenkreise.">
 <!-- HIER: og:image + og:url auf die echte Vorschau-/Live-URL setzen, sobald gehostet (s. OFFENE-FRAGEN.md #13) -->
 <meta property="og:image" content="assets/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -37,6 +37,7 @@
   --ink:#2B2320; --ink-soft:#5E5248; --ink-faint:#8C8071;
   --night:#241A2E; --night-deep:#180F20;
   --clay:#C1683D; --gold:#C89B4A; --sage:#7C8A6B;
+  --coral:#E37A4C; --coral-soft:#F0A87C; --lavender:#8F7BA6; --lavender-soft:#C9BBDA; --dusk:#3A4A57;
   --line:rgba(43,35,32,.13); --line-strong:rgba(43,35,32,.22);
   --line-night:rgba(247,240,230,.16);
   --serif:'Fraunces','Fraunces Fallback',Georgia,serif;
@@ -82,7 +83,9 @@ img,svg{display:block;max-width:100%}
 /* NAV */
 .nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px var(--gut);transition:background .3s,box-shadow .3s,padding .3s}
 .nav.scrolled{background:rgba(247,240,230,.9);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding-block:10px}
-.brand{display:flex;flex-direction:column;line-height:1.05}
+.brand{display:flex;align-items:center;gap:10px;line-height:1.05}
+.brand img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.brand .btxt{display:flex;flex-direction:column}
 .brand b{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:.01em}
 .brand span{font-family:var(--sans);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);margin-top:2px}
 .navlinks{display:flex;align-items:center;gap:26px}
@@ -97,16 +100,21 @@ img,svg{display:block;max-width:100%}
 .menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* HERO */
-.hero{position:relative;background:var(--night);color:var(--sand);padding-top:clamp(120px, 18vh, 176px);padding-bottom:clamp(64px, 9vw, 108px);overflow:clip}
+.hero{position:relative;background:radial-gradient(120% 90% at 82% 100%,rgba(227,122,76,.35),transparent 60%),var(--night);color:var(--sand);padding-top:clamp(120px, 18vh, 176px);padding-bottom:clamp(64px, 9vw, 108px);overflow:clip}
 .hero-sky{position:absolute;inset:0;z-index:0;pointer-events:none}
 .hero-sky svg{width:100%;height:100%}
-.hero-wrap{position:relative;z-index:1;max-width:760px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,64px);align-items:center}
+.hero-wrap{max-width:600px}
 .hero .eyebrow{color:var(--gold)}
 .hero h1{font-size:var(--h1);margin:.32em 0 .5em;color:#fff}
-.hero h1 em{color:var(--gold)}
+.hero h1 em{color:var(--coral-soft)}
 .hero .lede{color:#E4D9C8;max-width:48ch}
 .hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
-.hero .btn-primary{color:#fff}
+.hero .btn-primary{color:#fff;background:var(--coral)}
+.hero .btn-primary:hover{background:#c8622f}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:var(--r-lg);box-shadow:0 30px 60px -24px rgba(0,0,0,.55);border:5px solid rgba(247,240,230,.12)}
+.hero-photo::after{content:"";position:absolute;inset:auto auto -14px -14px;width:42%;height:56%;border-left:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);border-radius:0 0 0 var(--r-lg);z-index:-1}
 .wave-line{stroke:var(--gold);stroke-width:1.4;fill:none;opacity:.55}
 .wave-drift{animation:drift 26s linear infinite}
 @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-160px)}}
@@ -126,8 +134,11 @@ img,svg{display:block;max-width:100%}
 .karten{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);margin-top:42px}
 .karte{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .js .karte:hover{transform:translateY(-5px);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 30px 60px -30px rgba(24,15,32,.4)}
-.karte-icon{width:100%;aspect-ratio:16/10;background:var(--sand-deep);display:grid;place-items:center}
-.karte-icon svg{width:56px;height:56px;color:var(--clay)}
+.karte-icon{width:100%;aspect-ratio:16/10;background:var(--tint-soft,var(--sand-deep));display:grid;place-items:center}
+.karte-icon svg{width:56px;height:56px;color:var(--tint,var(--clay))}
+.karte.-musik{--tint:var(--coral);--tint-soft:#FBE6D9}
+.karte.-retreats{--tint:var(--clay);--tint-soft:var(--sand-deep)}
+.karte.-begleitung{--tint:var(--lavender);--tint-soft:#EAE3F0}
 .karte-body{padding:clamp(20px,2vw,26px);display:flex;flex-direction:column;gap:10px;flex:1}
 .karte h3{font-size:var(--h3)}
 .karte p{color:var(--ink-soft);font-size:15.5px;flex-grow:1}
@@ -143,8 +154,8 @@ img,svg{display:block;max-width:100%}
 /* ÜBER */
 .ueber-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,68px);align-items:start}
 .ueber-figur{position:relative}
-.moon-portrait{width:100%;aspect-ratio:4/5;border-radius:var(--r-lg);background:linear-gradient(160deg,#2E2138,#181022);box-shadow:var(--shadow);display:grid;place-items:center;overflow:hidden}
-.moon-portrait svg{width:62%}
+.ueber-figur img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:var(--r-lg);box-shadow:var(--shadow);border:5px solid #fff}
+.ueber-figur::after{content:"";position:absolute;inset:auto auto -14px -14px;width:40%;height:52%;border-left:1.5px solid var(--coral);border-bottom:1.5px solid var(--coral);border-radius:0 0 0 var(--r-lg);z-index:-1}
 .ueber-figur figcaption{margin-top:10px;font-size:13px;color:var(--ink-faint);font-style:italic;font-family:var(--serif);text-align:center}
 .ueber-text p+p{margin-top:1em}.ueber-text .muted{color:var(--ink-soft)}
 .quali{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
@@ -154,17 +165,28 @@ img,svg{display:block;max-width:100%}
 
 /* RETREAT */
 .retreat{background:var(--sand-deep)}
-.retreat-card{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(24px,3vw,40px);box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.retreat-card{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);display:grid;grid-template-columns:.85fr 1.15fr;align-items:stretch}
+.retreat-img{width:100%;height:100%;min-height:260px;object-fit:cover}
+.retreat-body{padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;justify-content:center;gap:14px}
 .retreat-card h3{font-size:var(--h3);margin-bottom:6px}
-.retreat-meta{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:12px;font-size:14px;color:var(--ink-soft)}
+.retreat-meta{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:4px;font-size:14px;color:var(--ink-soft)}
 .retreat-meta b{color:var(--ink)}
 
 /* CIRCLES */
 .circles{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,22px);margin-top:40px}
-.circle{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,2.2vw,26px);box-shadow:var(--shadow)}
-.circle h3{font-size:var(--s1);margin-bottom:8px}
+.circle{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .3s var(--ease)}
+.js .circle:hover{transform:translateY(-4px)}
+.circle-img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.circle-body{padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:8px;flex:1;border-top:3px solid var(--tint,var(--clay))}
+.circle h3{font-size:var(--s1);margin-bottom:2px}
 .circle p{color:var(--ink-soft);font-size:15px}
-.circle a{font-weight:700;font-size:14px;color:var(--clay);display:inline-block;margin-top:12px}
+.circle a{font-weight:700;font-size:14px;color:var(--clay);display:inline-block;margin-top:auto;padding-top:10px}
+.circle.-women .circle-body{--tint:var(--lavender)}
+.circle.-women a{color:var(--lavender)}
+.circle.-soul .circle-body{--tint:var(--coral)}
+.circle.-soul a{color:var(--coral)}
+.circle.-yoga .circle-body{--tint:var(--sage)}
+.circle.-yoga a{color:var(--sage)}
 
 /* MUSIK */
 .musik{background:var(--night);color:#F1E9DA}
@@ -172,7 +194,9 @@ img,svg{display:block;max-width:100%}
 .musik .sec-head h2{color:#fff}
 .musik .sec-head p{color:#cfc4b2}
 .musik-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,24px);margin-top:40px}
-.musik-card{background:rgba(247,240,230,.06);border:1px solid var(--line-night);border-radius:var(--r-lg);padding:clamp(22px,2.4vw,30px)}
+.musik-card{background:rgba(247,240,230,.06);border:1px solid var(--line-night);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column}
+.musik-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.musik-card .mc-body{padding:clamp(22px,2.4vw,30px)}
 .musik-card h3{font-size:var(--s1);color:#fff;margin-bottom:8px}
 .musik-card p{color:#cfc4b2;font-size:15px}
 .musik-card .btn{margin-top:16px}
@@ -228,12 +252,14 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
   .navlinks{position:fixed;inset:0;background:var(--sand);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .4s var(--ease);z-index:40}
   .navlinks a:not(.btn){font-size:23px;font-family:var(--serif);font-weight:600}
   .menu-open .navlinks{transform:none}.burger{display:flex;z-index:45}
-  .ueber-grid,.kontakt-grid{grid-template-columns:1fr}
+  .ueber-grid,.kontakt-grid,.hero-grid{grid-template-columns:1fr}
+  .hero-photo{max-width:320px;margin-inline:auto;order:-1}
   .ueber-figur{max-width:340px;margin-inline:auto}
   .trust .wrap{grid-template-columns:1fr 1fr;gap:22px}
   .karten,.circles{grid-template-columns:1fr}
   .musik-grid{grid-template-columns:1fr}
   .retreat-card{grid-template-columns:1fr;text-align:left}
+  .retreat-img{min-height:220px}
 }
 </style>
 </head>
@@ -241,7 +267,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
 <a href="#inhalt" class="btn" style="position:absolute;left:-9999px;top:8px;z-index:99" onfocus="this.style.left='8px'" onblur="this.style.left='-9999px'">Zum Inhalt springen</a>
 
 <nav class="nav" id="nav" aria-label="Hauptnavigation">
-  <a class="brand" href="#top"><b>Marylou Ender</b><span>Musik · Retreats · Begleitung</span></a>
+  <a class="brand" href="#top"><img src="assets/avatar-nav.jpg" width="72" height="72" alt="" loading="eager"><span class="btxt"><b>Mary Lou Ender</b><span>Musik · Retreats · Begleitung</span></span></a>
   <div class="navlinks" id="menu">
     <a href="#angebote">Angebote</a>
     <a href="#retreat">Retreat</a>
@@ -268,14 +294,19 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
       </g>
     </svg>
   </div>
-  <div class="wrap hero-wrap">
-    <span class="eyebrow">Musik · Retreats · 1:1-Begleitung</span>
-    <h1>Finde deinen Weg zurück zur eigenen <em>Stimme.</em></h1>
-    <p class="lede">Ich begleite dich mit Musik, Atem und achtsamer Körperarbeit — in Retreats, in 1:1-Sessions und in Frauenkreisen. Damit du wieder in Verbindung kommst: mit dir, deiner Stimme und dem, was wirklich zählt.</p>
-    <div class="hero-cta">
-      <a href="#kontakt" class="btn btn-primary">1:1-Begleitung anfragen <span class="ar">→</span></a>
-      <a href="#retreat" class="btn btn-ghost">Nächstes Retreat ansehen</a>
+  <div class="wrap hero-grid">
+    <div class="hero-wrap">
+      <span class="eyebrow">Musik · Retreats · 1:1-Begleitung</span>
+      <h1>Finde deinen Weg zurück zur eigenen <em>Stimme.</em></h1>
+      <p class="lede">Ich begleite dich mit Musik, Atem und achtsamer Körperarbeit — in Retreats, in 1:1-Sessions und in Frauenkreisen. Damit du wieder in Verbindung kommst: mit dir, deiner Stimme und dem, was wirklich zählt.</p>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn btn-primary">1:1-Begleitung anfragen <span class="ar">→</span></a>
+        <a href="#retreat" class="btn btn-ghost">Nächstes Retreat ansehen</a>
+      </div>
     </div>
+    <figure class="hero-photo">
+      <img src="assets/hero-guitar.jpg" width="500" height="500" fetchpriority="high" alt="Mary Lou Ender mit Gitarre am Strand in der goldenen Abendsonne">
+    </figure>
   </div>
 </header>
 
@@ -298,7 +329,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
       <p>Musik, Körper und Gemeinschaft greifen ineinander. Was zu dir passt, finden wir gemeinsam heraus.</p>
     </div>
     <div class="karten reveal">
-      <article class="karte">
+      <article class="karte -musik">
         <div class="karte-icon" aria-hidden="true">
           <svg viewBox="0 0 48 48" fill="none"><path d="M18 34a6 6 0 1 1-4-5.7V10l16-4v20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="34" cy="22" r="6" stroke="currentColor" stroke-width="2"/></svg>
         </div>
@@ -308,7 +339,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
           <span class="mehr">Voice Activation · Singing Circles</span>
         </div>
       </article>
-      <article class="karte">
+      <article class="karte -retreats">
         <div class="karte-icon" aria-hidden="true">
           <svg viewBox="0 0 48 48" fill="none"><path d="M24 6c-8 8-10 18 0 36 10-18 8-28 0-36Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
         </div>
@@ -318,7 +349,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
           <span class="mehr">Yin Yoga · Breathwork · Community</span>
         </div>
       </article>
-      <article class="karte">
+      <article class="karte -begleitung">
         <div class="karte-icon" aria-hidden="true">
           <svg viewBox="0 0 48 48" fill="none"><path d="M24 26a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" stroke="currentColor" stroke-width="2"/><path d="M10 40c2-8 8-12 14-12s12 4 14 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
@@ -337,7 +368,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
   <div class="wrap reveal">
     <span class="eyebrow">Meine Haltung</span>
     <blockquote>„Ich begleite Menschen — online und persönlich — mit Musik, Yoga und Frauen-Körperarbeit, damit Heilung, Wachstum und Loslassen möglich werden. Und damit wir uns erinnern, wer wir wirklich sind."</blockquote>
-    <cite>Marylou Ender</cite>
+    <cite>Mary Lou Ender</cite>
   </div>
 </section>
 
@@ -345,15 +376,8 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
 <section class="sec" id="ueber">
   <div class="wrap ueber-grid">
     <figure class="ueber-figur reveal">
-      <!-- BILD: sobald ein Portrait von Marylou vorliegt, hier <img> statt .moon-portrait einsetzen (s. OFFENE-FRAGEN.md #8) -->
-      <div class="moon-portrait">
-        <svg viewBox="0 0 200 200" aria-hidden="true">
-          <circle cx="100" cy="100" r="70" fill="none" stroke="#C89B4A" stroke-width="1.4" opacity=".5"/>
-          <path d="M100 40c-24 24-30 72 0 120 30-48 24-96 0-120Z" fill="#C89B4A" opacity=".9"/>
-          <circle cx="100" cy="100" r="4" fill="#F7F0E6"/>
-        </svg>
-      </div>
-      <figcaption>Marylou Ender</figcaption>
+      <img src="assets/portrait-ueber.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Porträt von Mary Lou Ender">
+      <figcaption>Mary Lou Ender</figcaption>
     </figure>
     <div class="ueber-text reveal">
       <span class="eyebrow">Über mich</span>
@@ -384,7 +408,8 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
       <p>In Ko-Facilitation mit Katharina Eller (Yoga Vila): Yoga, Surf, Musik und Gemeinschaft an der marokkanischen Atlantikküste.</p>
     </div>
     <div class="retreat-card reveal">
-      <div>
+      <img class="retreat-img" src="assets/retreat-morocco.jpg" width="500" height="500" loading="lazy" decoding="async" alt="WE TREAT Morocco Retreat — Ocean House Taghazout, Yoga, Surf, Community">
+      <div class="retreat-body">
         <h3>Taghazout, Marokko</h3>
         <p style="color:var(--ink-soft)">Fünf Tage Yoga &amp; Sadhana, Surf, gemeinsames Kochen, Abendkreise mit Musik und Meditation — im Ocean House direkt am Atlantik.</p>
         <div class="retreat-meta">
@@ -392,8 +417,8 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
           <span>Ocean House, Taghazout</span>
           <span>mit Katharina Eller (Yoga Vila)</span>
         </div>
+        <a class="btn btn-primary" href="https://www.katharina-flows.com/we-treat-marocco-2026" target="_blank" rel="noopener" style="align-self:flex-start;margin-top:6px">Details &amp; Anmeldung <span class="ar">↗</span></a>
       </div>
-      <a class="btn btn-primary" href="https://www.katharina-flows.com/we-treat-marocco-2026" target="_blank" rel="noopener">Details &amp; Anmeldung <span class="ar">↗</span></a>
     </div>
   </div>
 </section>
@@ -407,20 +432,29 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
       <p>Kostenfreie Formate zum Reinschnuppern — bevor du dich für eine 1:1-Begleitung oder ein Retreat entscheidest.</p>
     </div>
     <div class="circles reveal">
-      <div class="circle">
-        <h3>Women Circle Connection</h3>
-        <p>Ein geschützter Kreis für Frauen, die sich austauschen und gegenseitig stärken möchten.</p>
-        <a href="https://chat.whatsapp.com/Ikc2PRRb75YJgW1POf5fPg" target="_blank" rel="noopener">Kreis beitreten ↗</a>
+      <div class="circle -women">
+        <img class="circle-img" src="assets/circle-women.jpg" width="500" height="500" loading="lazy" decoding="async" alt="Illustration einer Mond-Göttin am Feuer — Motiv für den Women Circle">
+        <div class="circle-body">
+          <h3>Women Circle Connection</h3>
+          <p>Ein geschützter Kreis für Frauen, die sich austauschen und gegenseitig stärken möchten.</p>
+          <a href="https://chat.whatsapp.com/Ikc2PRRb75YJgW1POf5fPg" target="_blank" rel="noopener">Kreis beitreten ↗</a>
+        </div>
       </div>
-      <div class="circle">
-        <h3>S O U L talk</h3>
-        <p>Offene Gespräche über das, was unter der Oberfläche liegt — ehrlich, ohne Bewertung.</p>
-        <a href="https://chat.whatsapp.com/JYUEWcPZJBR9OFlGcB3lRD" target="_blank" rel="noopener">Dazustoßen ↗</a>
+      <div class="circle -soul">
+        <img class="circle-img" src="assets/circle-soultalk.jpg" width="500" height="500" loading="lazy" decoding="async" alt="Lagerfeuer unter Sternenhimmel bei einem Soul-Talk-Abend">
+        <div class="circle-body">
+          <h3>S O U L talk</h3>
+          <p>Offene Gespräche über das, was unter der Oberfläche liegt — ehrlich, ohne Bewertung.</p>
+          <a href="https://chat.whatsapp.com/JYUEWcPZJBR9OFlGcB3lRD" target="_blank" rel="noopener">Dazustoßen ↗</a>
+        </div>
       </div>
-      <div class="circle">
-        <h3>Yoga for Peace</h3>
-        <p>Gemeinsame Praxis mit Yoga und Stille als stiller Beitrag zu mehr Frieden.</p>
-        <a href="https://chat.whatsapp.com/KUVAFU1MtCiGot0BOQxVOL" target="_blank" rel="noopener">Mitmachen ↗</a>
+      <div class="circle -yoga">
+        <img class="circle-img" src="assets/circle-yogapeace.jpg" width="500" height="500" loading="lazy" decoding="async" alt="Yoga-Praxis im Garten in der Abenddämmerung — Yoga for Peace">
+        <div class="circle-body">
+          <h3>Yoga for Peace</h3>
+          <p>Gemeinsame Praxis mit Yoga und Stille als stiller Beitrag zu mehr Frieden.</p>
+          <a href="https://chat.whatsapp.com/KUVAFU1MtCiGot0BOQxVOL" target="_blank" rel="noopener">Mitmachen ↗</a>
+        </div>
       </div>
     </div>
   </div>
@@ -436,14 +470,20 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
     </div>
     <div class="musik-grid reveal">
       <div class="musik-card">
-        <h3>„Love in Wrong Places"</h3>
-        <p>Mein aktueller Song auf Spotify — ein Stück über Liebe an den falschen Orten und den Weg zurück zu sich.</p>
-        <a class="btn btn-ghost" href="https://open.spotify.com/track/70tTrs8WfSW8sdev9U6zbh" target="_blank" rel="noopener">Auf Spotify hören <span class="ar">↗</span></a>
+        <img src="assets/spotify-cover.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Cover-Motiv zu „Love in Wrong Places"">
+        <div class="mc-body">
+          <h3>„Love in Wrong Places"</h3>
+          <p>Mein aktueller Song auf Spotify — ein Stück über Liebe an den falschen Orten und den Weg zurück zu sich.</p>
+          <a class="btn btn-ghost" href="https://open.spotify.com/track/70tTrs8WfSW8sdev9U6zbh" target="_blank" rel="noopener">Auf Spotify hören <span class="ar">↗</span></a>
+        </div>
       </div>
       <div class="musik-card">
-        <h3>YouTube-Kanal</h3>
-        <p>Weitere Songs, Aufnahmen aus Circles und Einblicke in meine musikalische Arbeit.</p>
-        <a class="btn btn-ghost" href="https://www.youtube.com/channel/UCzYpgVKvNSNQgCsWSo1h9ZQ/" target="_blank" rel="noopener">Kanal ansehen <span class="ar">↗</span></a>
+        <img src="assets/musik-youtube.jpg" width="500" height="500" loading="lazy" decoding="async" alt="Mary Lou Ender im Garten — Einblick aus ihrem YouTube-Kanal">
+        <div class="mc-body">
+          <h3>YouTube-Kanal</h3>
+          <p>Weitere Songs, Aufnahmen aus Circles und Einblicke in meine musikalische Arbeit.</p>
+          <a class="btn btn-ghost" href="https://www.youtube.com/channel/UCzYpgVKvNSNQgCsWSo1h9ZQ/" target="_blank" rel="noopener">Kanal ansehen <span class="ar">↗</span></a>
+        </div>
       </div>
     </div>
   </div>
@@ -485,7 +525,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
         <div class="field"><label for="m">Deine Nachricht</label><textarea id="m" name="nachricht" required></textarea></div>
         <label class="hp" aria-hidden="true">Bitte leer lassen <input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label>
         <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Nachricht senden <span class="ar">→</span></button>
-        <p class="formnote">Deine Nachricht geht direkt an Marylou. Alternativ erreichst du sie per E-Mail unter <a href="mailto:maryloumusic42@gmail.com">maryloumusic42@gmail.com</a>.</p>
+        <p class="formnote">Deine Nachricht geht direkt an Mary Lou. Alternativ erreichst du sie per E-Mail unter <a href="mailto:maryloumusic42@gmail.com">maryloumusic42@gmail.com</a>.</p>
         <div id="ok">Danke für deine Nachricht — sie ist unterwegs. 🌙</div>
         <div id="err">Etwas ist schiefgelaufen. Schreib mir gerne direkt an <a href="mailto:maryloumusic42@gmail.com">maryloumusic42@gmail.com</a>.</div>
       </form>
@@ -499,18 +539,18 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
   <div class="wrap">
     <div class="foot-top">
       <div>
-        <a class="brand" href="#top"><b>Marylou Ender</b><span>Musik · Retreats · 1:1-Begleitung</span></a>
+        <a class="brand" href="#top"><b>Mary Lou Ender</b><span>Musik · Retreats · 1:1-Begleitung</span></a>
         <p style="margin-top:13px;max-width:36ch;color:#8f8b7e">Musik, Yoga und Frauen-Körperarbeit für Heilung, Wachstum und Verbindung — online und bei Retreats.</p>
       </div>
       <div><h4>Seite</h4><ul><li><a href="#angebote">Angebote</a></li><li><a href="#retreat">Retreat</a></li><li><a href="#ueber">Über mich</a></li><li><a href="#musik">Musik</a></li><li><a href="#kontakt">Kontakt</a></li></ul></div>
       <div><h4>Rechtliches &amp; mehr</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li><li><a href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
     </div>
-    <div class="foot-bot"><span>© 2026 Marylou Ender</span><span class="made">Handgebaut von Lechcode · cookiefrei, ohne Tracking</span></div>
+    <div class="foot-bot"><span>© 2026 Mary Lou Ender</span><span class="made">Handgebaut von Lechcode · cookiefrei, ohne Tracking</span></div>
   </div>
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Marylou Ender","description":"Musik, Retreats und 1:1-spirituelle Begleitung: Yin Yoga, Breathwork, Voice Activation und Frauenkreise.","email":"maryloumusic42@gmail.com","sameAs":["https://www.instagram.com/maryloumusic3/","https://open.spotify.com/track/70tTrs8WfSW8sdev9U6zbh","https://www.youtube.com/channel/UCzYpgVKvNSNQgCsWSo1h9ZQ/"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Mary Lou Ender","description":"Musik, Retreats und 1:1-spirituelle Begleitung: Yin Yoga, Breathwork, Voice Activation und Frauenkreise.","email":"maryloumusic42@gmail.com","sameAs":["https://www.instagram.com/maryloumusic3/","https://open.spotify.com/track/70tTrs8WfSW8sdev9U6zbh","https://www.youtube.com/channel/UCzYpgVKvNSNQgCsWSo1h9ZQ/"]}
 </script>
 
 <script>

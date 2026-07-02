@@ -1,0 +1,8 @@
+/* Lechcode — lokale Schriften für Stephanie Diehl. Keine externen Requests (DSGVO). */
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/fraunces-600.woff2') format('woff2')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:400;font-display:swap;src:url('fonts/fraunces-italic.woff2') format('woff2')}
+@font-face{font-family:'Karla';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/karla-regular.woff2') format('woff2')}
+@font-face{font-family:'Karla';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/karla-700.woff2') format('woff2')}
+/* Fallback-Metriken gegen CLS (gemessen: Fraunces/Georgia 108,6 %, Karla/Arial 100 %) */
+@font-face{font-family:'Fraunces Fallback';src:local('Georgia');size-adjust:108.6%;ascent-override:92%;descent-override:24%}
+@font-face{font-family:'Karla Fallback';src:local('Arial');size-adjust:100%}

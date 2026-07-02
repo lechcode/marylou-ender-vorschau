@@ -201,12 +201,18 @@ img,svg{display:block;max-width:100%}
 .musik .sec-head h2{color:#fff}
 .musik .sec-head p{color:#cfc4b2}
 .musik-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,24px);margin-top:40px}
-.musik-card{background:rgba(247,240,230,.06);border:1px solid var(--line-night);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column}
-.musik-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
-.musik-card .mc-body{padding:clamp(22px,2.4vw,30px)}
+.musik-card{background:rgba(247,240,230,.06);border:1px solid var(--line-night);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s var(--ease)}
+.js .musik-card:hover{transform:translateY(-5px)}
+.mc-media{position:relative;aspect-ratio:4/3;overflow:hidden}
+.mc-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+.mc-badge{position:absolute;left:20px;bottom:-24px;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 20px -6px rgba(0,0,0,.55);z-index:1}
+.mc-badge.-spotify{background:#1DB954}
+.mc-badge.-youtube{background:#FF0000}
+.mc-badge svg{width:30px;height:30px;color:#fff}
+.musik-card .mc-body{padding:38px clamp(22px,2.4vw,30px) clamp(22px,2.4vw,30px);display:flex;flex-direction:column;flex:1}
 .musik-card h3{font-size:var(--s1);color:#fff;margin-bottom:8px}
 .musik-card p{color:#cfc4b2;font-size:15px}
-.musik-card .btn{margin-top:16px}
+.musik-card .btn{margin-top:auto;align-self:flex-start}
 .musik-card .btn-ghost{border-color:var(--line-night);color:#F1E9DA}
 .musik-card .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
@@ -479,7 +485,12 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
     </div>
     <div class="musik-grid reveal">
       <div class="musik-card">
-        <img src="assets/spotify-cover.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Cover-Motiv zu „Love in Wrong Places"">
+        <div class="mc-media">
+          <img src="assets/spotify-cover.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Cover-Motiv zu „Love in Wrong Places"">
+          <span class="mc-badge -spotify" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.59 14.43a.62.62 0 0 1-.86.21c-2.35-1.44-5.3-1.76-8.79-.96a.62.62 0 1 1-.28-1.21c3.81-.87 7.09-.5 9.72 1.11.3.18.39.57.21.85Zm1.23-2.73a.78.78 0 0 1-1.07.26c-2.69-1.65-6.79-2.13-9.98-1.16a.78.78 0 1 1-.45-1.49c3.64-1.11 8.16-.57 11.25 1.32.37.23.49.71.25 1.07Zm.11-2.85C14.81 8.94 9.4 8.76 6.3 9.7a.94.94 0 1 1-.54-1.8c3.56-1.08 9.53-.87 13.29 1.36a.94.94 0 0 1-.96 1.61Z"/></svg>
+          </span>
+        </div>
         <div class="mc-body">
           <h3>„Love in Wrong Places"</h3>
           <p>Mein aktueller Song auf Spotify — ein Stück über Liebe an den falschen Orten und den Weg zurück zu sich.</p>
@@ -487,7 +498,12 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
         </div>
       </div>
       <div class="musik-card">
-        <img src="assets/musik-youtube.jpg" width="500" height="500" loading="lazy" decoding="async" alt="Mary Lou im Garten — Einblick aus ihrem YouTube-Kanal">
+        <div class="mc-media">
+          <img src="assets/musik-youtube.jpg" width="500" height="500" loading="lazy" decoding="async" alt="Mary Lou im Garten — Einblick aus ihrem YouTube-Kanal">
+          <span class="mc-badge -youtube" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42A2.5 2.5 0 0 0 2.42 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .42 4.81 2.5 2.5 0 0 0 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42a2.5 2.5 0 0 0 1.77-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.42-4.81ZM10 15V9l5.2 3-5.2 3Z"/></svg>
+          </span>
+        </div>
         <div class="mc-body">
           <h3>YouTube-Kanal</h3>
           <p>Weitere Songs, Aufnahmen aus Circles und Einblicke in meine musikalische Arbeit.</p>

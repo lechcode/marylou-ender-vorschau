@@ -160,10 +160,12 @@ img,svg{display:block;max-width:100%}
 .community-bild{margin-top:44px;border-radius:var(--r-lg);overflow:hidden;border:6px solid var(--cream);box-shadow:0 26px 60px -34px rgba(44,36,48,.6)}
 .community-bild img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .circles{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,28px);margin-top:clamp(26px,3.4vw,38px)}
-.circle{background:var(--cream);border-radius:var(--r);padding:clamp(20px,2.4vw,28px);border-top:3px solid var(--tint,var(--clay))}
+.circle{display:flex;flex-direction:column;background:var(--cream);border-radius:var(--r);padding:clamp(20px,2.4vw,28px);border-top:3px solid var(--tint,var(--clay))}
 .circle h3{font-size:var(--s1);position:relative;padding-left:22px}
 .circle h3::before{content:"";position:absolute;left:0;top:.52em;width:11px;height:11px;border-radius:50%;background:var(--tint,var(--clay))}
 .circle p{color:var(--ink-soft);font-size:15px;margin-top:9px}
+.circle-link{margin-top:auto;padding-top:16px;font-weight:700;font-size:14.5px;color:var(--tint,var(--clay));display:inline-flex;align-items:center;gap:.4em;align-self:flex-start}
+.circle-link:hover{gap:.6em;text-decoration:none}
 .circle.-women{--tint:var(--lavender)}.circle.-soul{--tint:var(--clay)}.circle.-yoga{--tint:var(--sage)}
 .community-schluss{margin-top:clamp(28px,3.4vw,40px);text-align:center}
 .community-schluss p{max-width:62ch;margin-inline:auto;color:var(--ink-soft);font-size:var(--s1)}
@@ -437,21 +439,21 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#c5b8bf}footer a:h
       <div class="circle -women">
         <h3>Women Circle Connection</h3>
         <p>Ein geschützter Raum von Frau zu Frau für ehrlichen Austausch, Wärme und das Gefühl, getragen zu werden.</p>
+        <a class="circle-link" href="https://chat.whatsapp.com/Ikc2PRRb75YJgW1POf5fPg" target="_blank" rel="noopener">Jetzt beitreten <span class="ar">↗</span></a>
       </div>
       <div class="circle -soul">
         <h3>S O U L talk</h3>
         <p>Offene Gespräche über das, was unter der Oberfläche liegt. Ein Ort zum Zuhören und Reden — von Herz zu Herz, ganz ohne Bewertung.</p>
+        <a class="circle-link" href="https://chat.whatsapp.com/JYUEWcPZJBR9OFlGcB3lRD" target="_blank" rel="noopener">Jetzt beitreten <span class="ar">↗</span></a>
       </div>
       <div class="circle -yoga">
         <h3>Yoga for Peace</h3>
         <p>Gemeinsames Yoga und Stille, um das eigene Nervensystem zu beruhigen und wieder mehr Frieden in uns selbst zu spüren.</p>
+        <a class="circle-link" href="https://chat.whatsapp.com/KUVAFU1MtCiGot0BOQxVOL" target="_blank" rel="noopener">Jetzt beitreten <span class="ar">↗</span></a>
       </div>
     </div>
     <div class="community-schluss center reveal">
       <p>Komm einfach so dazu, wie du bist. Du kannst dich ganz in Ruhe umsehen und genau in die Räume hineinspüren, die dir in diesem Moment gut tun.</p>
-      <!-- HIER: Link zur übergeordneten WhatsApp-Community eintragen, sobald von Mary Lou geliefert
-           (zeigt bis dahin auf den Women Circle) -->
-      <a class="btn btn-primary" href="https://chat.whatsapp.com/Ikc2PRRb75YJgW1POf5fPg" target="_blank" rel="noopener">Der Community beitreten <span class="ar">↗</span></a>
     </div>
   </div>
 </section>

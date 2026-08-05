@@ -194,14 +194,14 @@ img,svg{display:block;max-width:100%}
 .player-links .-spotify .plat{color:#1DB954}
 .player-links .-youtube .plat{color:#FF3B30}
 
-/* FAQ */
-.faq{max-width:780px;margin-top:36px}
-.fq{border-bottom:1px solid var(--line)}
-.fq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;position:relative;font-family:var(--serif);font-weight:600;font-size:var(--s1);color:var(--ink)}
-.fq summary::-webkit-details-marker{display:none}
-.fq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-family:var(--sans);font-size:24px;color:var(--clay);transition:transform .25s}
-.fq[open] summary::after{transform:translateY(-50%) rotate(45deg)}
-.fq p{padding:0 0 22px;color:var(--ink-soft)}
+/* HERZENS-EMPFEHLUNG */
+.empfehlung{max-width:700px;margin-inline:auto;text-align:center;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(30px,4vw,48px)}
+.tfc-mark{width:38px;height:22px;margin-inline:auto}
+.tfc-name{display:block;margin-top:10px;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint)}
+.empfehlung h2{font-size:var(--h2);margin:.28em 0 .45em}
+.empfehlung p{color:var(--ink-soft);font-size:var(--s1);margin-inline:auto}
+.empfehlung .code{font-family:var(--sans);font-weight:700;color:var(--ink);background:var(--sand-deep);border-radius:8px;padding:1px 8px;white-space:nowrap}
+.empfehlung .btn{margin-top:24px}
 
 /* KONTAKT */
 .kontakt{background:var(--grape-deep);color:#E9E0DA}
@@ -458,16 +458,21 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#c5b8bf}footer a:h
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="sec" id="faq">
+<!-- HERZENS-EMPFEHLUNG (Kooperation The Female Company) -->
+<section class="sec" id="empfehlung">
   <div class="wrap">
-    <div class="sec-head center reveal"><span class="eyebrow" style="justify-content:center">Häufige Fragen</span><h2>Gut zu wissen.</h2></div>
-    <div class="faq reveal" style="margin-inline:auto">
-      <details class="fq"><summary>Was ist eine Einzelbegleitung bei dir?</summary><p>Ein persönlicher Begleitprozess ganz auf dich zugeschnitten — als Spiritual Guidance oder Soul Talk, meist online, mit Raum für das, was gerade dran ist. Den Ablauf klären wir vorab gemeinsam.</p></details>
-      <details class="fq"><summary>Gibt es Yoga einzeln und in Gruppen?</summary><p>Beides. Ich begleite dich in 1:1-Yoga ganz individuell oder in Gruppenkursen. Es geht nicht um Perfektion, sondern darum, wieder bei dir anzukommen.</p></details>
-      <details class="fq"><summary>Wie läuft das Retreat in Marokko ab?</summary><p>Fünf Tage (29. Oktober – 2. November 2026) im Ocean House in Taghazout: Morgen-Yoga, Surf am Nachmittag und Abendprogramme mit Musik, Meditation und Sharing Circles. Für Fragen buchst du am besten einen Discovery Call; anmelden kannst du dich direkt über das Formular.</p></details>
-      <details class="fq"><summary>Sind die WhatsApp-Kreise kostenlos?</summary><p>Ja, die Community-Kreise (Women Circle, Soul Talk, Yoga for Peace) sind offene, kostenfreie Formate zum Reinschnuppern.</p></details>
-      <details class="fq"><summary>Wie schnell bekomme ich eine Antwort?</summary><p>Ich melde mich persönlich bei dir zurück, in der Regel innerhalb weniger Tage.</p></details>
+    <div class="empfehlung reveal">
+      <!-- HIER: offizielles Logo von The Female Company einsetzen, sobald es vorliegt (aktuell nachgebaute Bildmarke) -->
+      <svg class="tfc-mark" viewBox="2 0 60 34" role="img" aria-label="The Female Company">
+        <g fill="#C4001D">
+          <path transform="translate(31 2) rotate(38)" d="M0 0C0 0-9.5 11-9.5 16C-9.5 21.3-5.2 25.5 0 25.5C5.2 25.5 9.5 21.3 9.5 16C9.5 11 0 0 0 0Z"/>
+          <path transform="translate(33 2) rotate(-38)" d="M0 0C0 0-9.5 11-9.5 16C-9.5 21.3-5.2 25.5 0 25.5C5.2 25.5 9.5 21.3 9.5 16C9.5 11 0 0 0 0Z"/>
+        </g>
+      </svg>
+      <span class="tfc-name">The Female Company</span>
+      <h2>Für alle <em>Frauen.</em></h2>
+      <p>Für ein rundum geborgenes Körpergefühl an allen Tagen deines Zyklus empfehle ich dir von Herzen die nachhaltige Perioden-Unterwäsche von The Female Company – mit dem Code <b class="code">TFC_MARYLOU</b> sparst du direkt bei deiner Bestellung.</p>
+      <a class="btn btn-ghost" href="https://www.thefemalecompany.com/" target="_blank" rel="noopener">Zur Herzens-Empfehlung <span class="ar">↗</span></a>
     </div>
   </div>
 </section>

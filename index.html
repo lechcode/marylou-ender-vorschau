@@ -4,7 +4,7 @@
   AUFTRAG (fix beauftragt 05.08.2026, 500 €) · Single-File, kein Build · erstellt von Lechcode
   Look: reduziert & professionell, warme Naturtoene — Sand/Kakao/Terrakotta/Gold, Cormorant-Serife, RUNDE Bilder (Kundenwunsch).
   Fotos: professioneller Shooting-Satz von Mary Lou (Ordner material/Bilder Website), quadratisch zugeschnitten.
-  Spotify-Player als DSGVO-freundliche Zwei-Klick-Einbettung. noindex bis PLZ+Ort im Impressum ergänzt & Freigabe.
+  YouTube-Videos als DSGVO-freundliche Zwei-Klick-Einbettung (Vorschaubilder lokal, youtube-nocookie erst nach Klick). noindex bis PLZ+Ort im Impressum ergänzt & Freigabe.
   Pflege-Stellen: Suche nach "HIER:"
 -->
 <html lang="de">
@@ -187,7 +187,7 @@ img,svg{display:block;max-width:100%}
 .embed-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,29,18,.10) 34%,rgba(42,29,18,.72) 66%,rgba(42,29,18,.92) 100%);transition:opacity .3s}
 .embed-load:hover .embed-overlay{opacity:.88}
 .embed-inner{position:relative;display:flex;align-items:center;gap:16px;padding:22px 24px 24px;width:100%}
-.embed-play{flex:none;width:54px;height:54px;border-radius:50%;background:#1DB954;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.7);transition:transform .25s var(--ease)}
+.embed-play{flex:none;width:58px;height:41px;border-radius:11px;background:#E62117;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.7);transition:transform .25s var(--ease)}
 .embed-load:hover .embed-play{transform:scale(1.07)}
 .embed-play svg{width:26px;height:26px;color:#fff;margin-left:3px}
 .embed-txt b{font-family:var(--serif);font-size:22px;display:block;line-height:1.15;text-shadow:0 1px 12px rgba(30,20,10,.6)}
@@ -198,6 +198,10 @@ img,svg{display:block;max-width:100%}
 .player-links .plat{width:20px;height:20px;flex:none}
 .player-links .-spotify .plat{color:#1DB954}
 .player-links .-youtube .plat{color:#FF3B30}
+.musik-anlass{margin-top:clamp(30px,4vw,46px);text-align:center;max-width:620px;margin-inline:auto}
+.musik-anlass p{color:#d8ccc0;font-size:var(--s1);margin-inline:auto}
+.musik-anlass .btn{margin-top:18px;border-color:rgba(246,236,224,.34);color:#EFE7DE;background:rgba(255,255,255,.07)}
+.musik-anlass .btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(199,154,78,.14)}
 
 /* HERZENS-EMPFEHLUNG — nur Überschrift, Rest klappt auf */
 #empfehlung{padding-block:clamp(30px,4.5vw,58px)}
@@ -351,7 +355,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
     </div>
     <div class="players reveal">
       <div class="embed">
-        <button class="embed-load" data-track="70tTrs8WfSW8sdev9U6zbh" data-title="Love in Wrong Places" style="background-image:url('assets/foto-song-love-in-wrong-places.jpg')" aria-label="Spotify-Player laden und „Love in Wrong Places“ abspielen">
+        <button class="embed-load" data-yt="pUsuwRtbtDU" data-title="Love in Wrong Places" style="background-image:url('assets/video-love-in-wrong-places.jpg')" aria-label="YouTube-Video laden und abspielen: Love in Wrong Places">
           <span class="embed-overlay"></span>
           <span class="embed-inner">
             <span class="embed-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
@@ -360,7 +364,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
         </button>
       </div>
       <div class="embed">
-        <button class="embed-load" data-track="0Ynm8axcMXme5MtNsbBzWn" data-title="Inner Child" style="background-image:url('assets/foto-song-inner-child.jpg')" aria-label="Spotify-Player laden und „Inner Child“ abspielen">
+        <button class="embed-load" data-yt="2egmas7aCOo" data-title="Inner Child" style="background-image:url('assets/video-inner-child.jpg')" aria-label="YouTube-Video laden und abspielen: Inner Child">
           <span class="embed-overlay"></span>
           <span class="embed-inner">
             <span class="embed-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
@@ -374,10 +378,10 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
         <svg class="plat" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.56 18.72 12.84c.36.24.54.84.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.1 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.5.3z"/></svg>
         Alle Songs auf Spotify <span class="ar">↗</span>
       </a>
-      <a class="btn btn-ghost -youtube" href="https://www.youtube.com/channel/UCzYpgVKvNSNQgCsWSo1h9ZQ/" target="_blank" rel="noopener">
-        <svg class="plat" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
-        YouTube-Kanal <span class="ar">↗</span>
-      </a>
+    </div>
+    <div class="musik-anlass reveal">
+      <p>Meine Musik teile ich auch im Rahmen einer privaten Zeremonie oder für einen ganz persönlichen Anlass — schreib mir einfach.</p>
+      <a class="btn btn-ghost" href="#kontakt">Schreib mir <span class="ar">→</span></a>
     </div>
   </div>
 </section>
@@ -552,11 +556,11 @@ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.tar
 if(matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(r=>r.classList.add('in'))}
 else{document.querySelectorAll('.reveal').forEach(r=>io.observe(r))}
 
-/* Spotify: Zwei-Klick-Einbettung — lädt den jeweiligen Player erst auf Klick */
-document.querySelectorAll('.embed-load[data-track]').forEach(btn=>{
+/* YouTube: Zwei-Klick-Einbettung — lädt das Video erst auf Klick (nocookie-Domain) */
+document.querySelectorAll('.embed-load[data-yt]').forEach(btn=>{
   btn.addEventListener('click',()=>{
-    const id=btn.dataset.track, title=(btn.dataset.title||'Song').replace(/"/g,'');
-    btn.closest('.embed').innerHTML='<iframe title="Spotify-Player: '+title+'" style="border:0;border-radius:18px;display:block" src="https://open.spotify.com/embed/track/'+id+'?utm_source=generator" width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
+    const id=btn.dataset.yt, title=(btn.dataset.title||'Video').replace(/"/g,'');
+    btn.closest('.embed').innerHTML='<iframe title="YouTube-Video: '+title+'" style="border:0;display:block;width:100%;aspect-ratio:16/9" src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>';
   });
 });
 

@@ -219,6 +219,8 @@ img,svg{display:block;max-width:100%;height:auto}
 .weg-cta{margin-top:auto;padding-top:18px;display:inline-flex;align-items:center;gap:.45em;overflow-wrap:anywhere;font-weight:700;font-size:14.5px;color:var(--gold)}
 .weg:hover .weg-cta .ar{transform:translateX(3px)}
 .weg-cta .ar{transition:transform .25s var(--ease)}
+.weg[href^="mailto"] .weg-cta{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:rgba(199,154,78,.55)}
+.weg[href^="mailto"]:hover .weg-cta{text-decoration-color:currentColor}
 
 /* FOOTER */
 footer{background:var(--cocoa-deep);color:#CCBBA4;padding-block:clamp(44px,6vw,66px) 30px;font-size:14.5px;border-top:1px solid rgba(255,255,255,.1)}

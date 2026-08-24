@@ -221,22 +221,18 @@ img,svg{display:block;max-width:100%}
 .kontakt{background:var(--cocoa-deep);color:#E9E0DA}
 .kontakt .eyebrow{color:var(--gold)}.kontakt .eyebrow::before{background:var(--gold)}
 .kontakt h2{color:#fff;font-size:var(--h2)}
-.kontakt-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(30px,5vw,64px);margin-top:34px;align-items:start}
-.cinfo{display:grid;gap:20px}
-.cline{display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:start}
-.cline .ic{color:var(--gold);margin-top:2px}
-.cline .lab{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:2px}
-.cline .v{font-size:15.5px;color:#E9E0DA;line-height:1.5}.cline a{color:#fff}
-form{background:var(--cream);color:var(--ink);border-radius:var(--r-lg);padding:clamp(22px,3vw,34px)}
-.field{margin-bottom:15px}label{display:block;font-size:13.5px;font-weight:700;margin-bottom:6px}
-input,textarea,select{width:100%;font-family:var(--sans);font-size:var(--s0);color:var(--ink);background:#fff;border:1.5px solid var(--line-strong);border-radius:12px;padding:12px 14px;transition:border-color .2s}
-input:focus,textarea:focus,select:focus{outline:none;border-color:var(--clay)}
-textarea{min-height:110px;resize:vertical}
-.hp{position:absolute;left:-9999px}
-.formnote{font-size:12.5px;color:var(--ink-soft);margin-top:12px;line-height:1.5}
-#ok,#err{display:none;margin-top:14px;padding:14px 16px;border-radius:12px;font-weight:700;font-size:14.5px}
-#ok{background:var(--sand-deep);color:var(--cocoa)}
-#err{background:#f0ddd2;color:#7c3319}
+.kontakt .sec-head{margin-inline:auto}
+.wege{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,26px);margin-top:clamp(30px,4vw,44px)}
+.weg{display:flex;flex-direction:column;align-items:flex-start;background:rgba(255,255,255,.055);border:1px solid rgba(246,236,224,.2);border-radius:var(--r-lg);padding:clamp(22px,2.6vw,30px);color:#E9E0DA;transition:background .25s var(--ease),border-color .25s var(--ease),transform .25s var(--ease)}
+.weg:hover{background:rgba(255,255,255,.09);border-color:var(--gold);transform:translateY(-3px);text-decoration:none}
+.weg:active{transform:translateY(0)}
+.weg-ic{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:rgba(199,154,78,.15);color:var(--gold)}
+.weg-ic svg{width:23px;height:23px}
+.weg h3{margin-top:16px;font-size:var(--s1);color:#fff}
+.weg p{margin-top:7px;font-size:15px;line-height:1.55;color:#c9bcae}
+.weg-cta{margin-top:auto;padding-top:18px;display:inline-flex;align-items:center;gap:.45em;overflow-wrap:anywhere;font-weight:700;font-size:14.5px;color:var(--gold)}
+.weg:hover .weg-cta .ar{transform:translateX(3px)}
+.weg-cta .ar{transition:transform .25s var(--ease)}
 
 /* FOOTER */
 footer{background:var(--cocoa-deep);color:#CCBBA4;padding-block:clamp(44px,6vw,66px) 30px;font-size:14.5px;border-top:1px solid rgba(255,255,255,.1)}
@@ -259,7 +255,8 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
   .navlinks{position:fixed;inset:0;background:var(--cream);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .4s var(--ease);z-index:40}
   .navlinks a:not(.btn){font-size:23px;font-family:var(--serif);font-weight:600;color:var(--ink)}
   .menu-open .navlinks{transform:none}.burger{display:flex;z-index:45}
-  .ueber-grid,.kontakt-grid,.hero-grid,.retreat-card{grid-template-columns:1fr}
+  .ueber-grid,.hero-grid,.retreat-card{grid-template-columns:1fr}
+  .wege{grid-template-columns:1fr}
   .hero-photo{order:-1}
   .ueber-figur{order:-1}
   .karten{grid-template-columns:1fr 1fr}
@@ -500,28 +497,32 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
 <!-- KONTAKT -->
 <section class="kontakt" id="kontakt">
   <div class="wrap sec">
-    <div class="sec-head reveal" style="max-width:50ch"><span class="eyebrow">Kontakt</span><h2>Schreib mir — ich freue mich auf dich.</h2></div>
-    <div class="kontakt-grid">
-      <div class="cinfo reveal">
-        <div class="cline"><span class="ic">✉</span><div><span class="lab">E-Mail</span><a class="v" href="mailto:maryloumusic42@gmail.com">maryloumusic42@gmail.com</a></div></div>
-        <div class="cline"><span class="ic">◐</span><div><span class="lab">Instagram</span><a class="v" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">@maryloumusic3</a></div></div>
-        <div class="cline"><span class="ic">↻</span><div><span class="lab">Antwort</span><span class="v">Ich melde mich persönlich bei dir zurück.</span></div></div>
-      </div>
-      <form id="form" action="https://api.web3forms.com/submit" method="POST">
-        <!-- PLATZHALTER-FORM: echten Web3Forms-Access-Key eintragen, s. OFFENE-FRAGEN.md -->
-        <input type="hidden" name="access_key" value="DEIN-WEB3FORMS-ACCESS-KEY">
-        <input type="hidden" name="subject" value="Neue Anfrage über die Website von Mary Lou">
-        <input type="hidden" name="from_name" value="Website-Kontaktformular">
-        <div class="field"><label for="n">Wie heißt du?</label><input id="n" name="name" type="text" autocomplete="name" required></div>
-        <div class="field"><label for="e">E-Mail</label><input id="e" name="email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="t">Worum geht's?</label><select id="t" name="thema"><option>Einzelbegleitung</option><option>Yoga</option><option>Frauenkreise</option><option>Retreat in Marokko</option><option>Musik / Zusammenarbeit</option><option>Etwas anderes</option></select></div>
-        <div class="field"><label for="m">Deine Nachricht</label><textarea id="m" name="nachricht" required></textarea></div>
-        <label class="hp" aria-hidden="true">Bitte leer lassen <input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label>
-        <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Nachricht senden <span class="ar">→</span></button>
-        <p class="formnote">Deine Nachricht geht direkt an Mary Lou. Alternativ erreichst du sie per E-Mail unter <a href="mailto:maryloumusic42@gmail.com">maryloumusic42@gmail.com</a>.</p>
-        <div id="ok">Danke für deine Nachricht — sie ist unterwegs.</div>
-        <div id="err">Etwas ist schiefgelaufen. Schreib mir gerne direkt an <a href="mailto:maryloumusic42@gmail.com">maryloumusic42@gmail.com</a>.</div>
-      </form>
+    <div class="sec-head center reveal" style="max-width:52ch"><span class="eyebrow" style="justify-content:center">Kontakt</span><h2>Schreib mir — ich freue mich auf dich.</h2></div>
+    <div class="wege reveal">
+      <a class="weg" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
+        <span class="weg-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <h3>Instagram</h3>
+        <p>Am schnellsten erreichst du mich mit einer Nachricht.</p>
+        <span class="weg-cta">@maryloumusic3 <span class="ar">↗</span></span>
+      </a>
+      <a class="weg" href="mailto:maryloumusic42@gmail.com">
+        <span class="weg-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.4" y="4.6" width="19.2" height="14.8" rx="3"/><path d="m3.4 6.4 8.6 6.4 8.6-6.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>E-Mail</h3>
+        <p>Schreib mir in Ruhe — ich melde mich persönlich bei dir zurück.</p>
+        <span class="weg-cta">maryloumusic42@gmail.com <span class="ar">→</span></span>
+      </a>
+      <a class="weg" href="https://cal.com/marylouu/connection-call-3?layout=mobile&amp;overlayCalendar=true" target="_blank" rel="noopener">
+        <span class="weg-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.9" y="4.6" width="18.2" height="16.8" rx="3.4"/><path d="M2.9 9.6h18.2M8 2.6v4M16 2.6v4" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Call buchen</h3>
+        <p>Lieber direkt sprechen? Such dir einen Termin aus, der dir passt.</p>
+        <span class="weg-cta">Termin aussuchen <span class="ar">↗</span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -564,16 +565,6 @@ document.querySelectorAll('.embed-load[data-yt]').forEach(btn=>{
   });
 });
 
-const form=document.getElementById('form'),ok=document.getElementById('ok'),err=document.getElementById('err');
-form.addEventListener('submit',async e=>{
-  e.preventDefault();
-  ok.style.display='none';err.style.display='none';
-  try{
-    const res=await fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)});
-    const data=await res.json();
-    if(data.success){ok.style.display='block';form.reset()}else{err.style.display='block'}
-  }catch(_){err.style.display='block'}
-});
 </script>
 </body>
 </html>

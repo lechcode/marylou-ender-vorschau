@@ -91,7 +91,7 @@ img,svg{display:block;max-width:100%}
 .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:50% 30%;border:1.5px solid var(--line-strong)}
 .brand .btxt{display:flex;flex-direction:column}
 .brand b{font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:.01em;color:var(--ink)}
-.brand span{font-family:var(--sans);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);margin-top:2px}
+.brand span{font-family:var(--sans);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);margin-top:2px;white-space:nowrap}
 .navlinks{display:flex;align-items:center;gap:24px}
 .navlinks a:not(.btn){font-size:14.5px;font-weight:700;color:var(--ink);position:relative}
 .navlinks a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--clay);transition:width .28s var(--ease)}
@@ -263,6 +263,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
   .hero-photo{order:-1}
   .ueber-figur{order:-1}
   .karten{grid-template-columns:1fr 1fr}
+  .brand span{display:none}
   .circles,.players{grid-template-columns:1fr}
 }
 @media (max-width:540px){
@@ -274,7 +275,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
 <a href="#inhalt" class="btn" style="position:absolute;left:-9999px;top:8px;z-index:99" onfocus="this.style.left='8px'" onblur="this.style.left='-9999px'">Zum Inhalt springen</a>
 
 <nav class="nav" id="nav" aria-label="Hauptnavigation">
-  <a class="brand" href="#top"><img src="assets/foto-ueber.jpg" width="76" height="76" alt="" loading="eager"><span class="btxt"><b>Mary Lou</b><span>Begleitung · Retreats · Musik</span></span></a>
+  <a class="brand" href="#top"><img src="assets/foto-ueber.jpg" width="76" height="76" alt="" loading="eager"><span class="btxt"><b>Mary Lou</b><span>Begleitung · Musik · Retreats · Yoga · Weiblichkeit</span></span></a>
   <div class="navlinks" id="menu">
     <a href="#angebote">Angebote</a>
     <a href="#retreat">Retreat</a>
@@ -292,7 +293,6 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
 <header class="hero">
   <div class="wrap hero-grid">
     <div class="hero-wrap">
-      <span class="eyebrow">1:1-Begleitung · Musik · Retreats · Yoga · Weiblichkeit</span>
       <h1>„We're all just walking each other <em>home</em>."</h1>
       <cite class="hero-quote-cite">— Ram Dass</cite>
       <p class="lede">Ich begleite dich ein Stück auf deiner Reise. In meinen Räumen darfst du wieder ganz bei dir selbst ankommen und dich mit all deinen Facetten, deiner Stimme und deinem Gefühl zeigen.</p>

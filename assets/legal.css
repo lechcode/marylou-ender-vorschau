@@ -11,3 +11,15 @@ p{margin-bottom:14px;color:var(--ink-soft)}
 .kv{margin-bottom:6px}.kv b{color:var(--ink)}
 hr{border:none;border-top:1px solid var(--line);margin:32px 0}
 footer{font-size:13px;color:#9C8B74;margin-top:40px}
+
+/* Seitenlayout der Rechtsseiten — Kopf, Textspalte, Fuß auf gemeinsamer Breite */
+.lhead{background:var(--linen);border-bottom:1px solid var(--line)}
+.lhead .inner,.sheet,.lfoot{max-width:760px;margin-inline:auto;padding-inline:clamp(20px,5vw,40px)}
+.lhead .inner{padding-block:clamp(26px,5vw,52px) clamp(20px,3vw,32px)}
+.sheet{padding-block:clamp(28px,5vw,52px)}
+.sheet>h2:first-child{margin-top:0}
+.lfoot{padding-block:0 clamp(34px,6vw,64px);font-size:13px;color:#9C8B74}
+.entwurf{display:inline-block;margin-top:10px;font-size:13.5px;color:var(--ink-soft);background:#EFE4D2;border-radius:999px;padding:6px 14px}
+.addr-block{border-left:3px solid var(--moss);background:#EFE4D2;border-radius:0 8px 8px 0;padding:14px 18px;margin:14px 0 18px}
+.addr-block p{margin:0;color:var(--ink)}
+.todo{background:#F2E2CE;border-radius:6px;padding:1px 7px;font-weight:700;color:var(--ink)}

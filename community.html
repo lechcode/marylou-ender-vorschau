@@ -139,19 +139,15 @@ img,svg{display:block;max-width:100%}
 .musik-anlass .btn{margin-top:18px;border-color:rgba(246,236,224,.34);color:#EFE7DE;background:rgba(255,255,255,.07)}
 .musik-anlass .btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(199,154,78,.14)}
 
-/* HERZENS-EMPFEHLUNG — nur Überschrift, Rest klappt auf */
-#empfehlung{padding-block:clamp(30px,4.5vw,58px)}
-.empfehlung{max-width:640px;margin-inline:auto;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg)}
-.empfehlung summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.55em;padding:16px 24px;min-height:58px}
-.empfehlung summary::-webkit-details-marker{display:none}
-.empfehlung summary h2{font-family:var(--serif);font-weight:500;font-size:var(--h3);color:var(--ink);margin:0}
-.empfehlung .chev{width:14px;height:9px;flex:none;color:var(--clay);transition:transform .3s var(--ease)}
-.empfehlung[open] .chev{transform:rotate(180deg)}
-.empfehlung-inhalt{text-align:center;padding:2px clamp(20px,3.2vw,40px) clamp(26px,3.4vw,38px)}
+/* KOOPERATIONSPARTNER — Raster waechst mit weiteren Partnern mit */
+.partner-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,360px));justify-content:center;gap:clamp(18px,2.4vw,28px);margin-top:clamp(28px,3.4vw,40px)}
+.partner{display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(26px,3vw,34px)}
 .tfc-logo{width:86px;height:auto;margin:0 auto 14px}
-.empfehlung p{color:var(--ink-soft);font-size:16.5px;margin-inline:auto}
-.empfehlung .code{font-family:var(--sans);font-weight:700;color:var(--ink);background:var(--sand-deep);border-radius:8px;padding:1px 8px;white-space:nowrap}
-.empfehlung .btn{margin-top:20px}
+.partner h3{font-size:var(--h3)}
+.partner p{color:var(--ink-soft);font-size:16px;margin-top:10px}
+.partner .code{font-family:var(--sans);font-weight:700;color:var(--ink);background:var(--sand-deep);border-radius:8px;padding:1px 8px;white-space:nowrap}
+.partner .btn{margin-top:auto;padding-top:0}
+.partner .btn{margin-top:22px}
 
 /* KONTAKT */
 .kontakt{background:var(--cocoa-deep);color:#E9E0DA}
@@ -317,20 +313,22 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
   </div>
 </section>
 
-<!-- HERZENS-EMPFEHLUNG (Kooperation The Female Company) -->
-<section class="sec" id="empfehlung">
+<!-- KOOPERATIONSPARTNER — weitere Partner einfach als zusaetzliche <article class="partner"> ergaenzen -->
+<section class="sec" id="kooperationen">
   <div class="wrap">
-    <details class="empfehlung reveal">
-      <summary>
-        <h2>Für alle <em>Frauen</em></h2>
-        <svg class="chev" viewBox="0 0 14 9" aria-hidden="true"><path d="M1 1.5 7 7.5 13 1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </summary>
-      <div class="empfehlung-inhalt">
+    <div class="sec-head center reveal">
+      <span class="eyebrow" style="justify-content:center">Kooperationen</span>
+      <h2>Meine <em>Kooperationspartner.</em></h2>
+      <p style="margin-inline:auto">Menschen und Marken, hinter denen ich von Herzen stehe.</p>
+    </div>
+    <div class="partner-grid reveal">
+      <article class="partner">
         <img class="tfc-logo" src="assets/logo-tfc.webp" width="300" height="260" loading="lazy" decoding="async" alt="The Female Company">
+        <h3>Für alle Frauen</h3>
         <p>Für ein rundum geborgenes Körpergefühl an allen Tagen deines Zyklus empfehle ich dir von Herzen die nachhaltige Perioden-Unterwäsche von The Female Company – mit dem Code <b class="code">TFC_MARYLOU</b> sparst du direkt bei deiner Bestellung.</p>
         <a class="btn btn-ghost" href="https://tfc.is/TFC_MARYLOU" target="_blank" rel="noopener">Zur Herzens-Empfehlung <span class="ar">↗</span></a>
-      </div>
-    </details>
+      </article>
+    </div>
   </div>
 </section>
 

@@ -160,21 +160,20 @@ img,svg{display:block;max-width:100%}
 .retreat-cta .cta-zeile{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0}
 .retreat-cta .frage{font-size:15.5px;color:var(--ink-soft);min-width:165px}
 
-/* COMMUNITY — breites Bild + drei Räume darunter */
-.community-bild{margin-top:44px;border-radius:var(--r-lg);overflow:hidden;border:6px solid var(--cream);box-shadow:0 26px 60px -34px rgba(62,46,30,.6)}
-.community-bild img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
-.circles{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,28px);margin-top:clamp(26px,3.4vw,38px)}
-.circle{display:flex;flex-direction:column;background:var(--cream);border-radius:var(--r);padding:clamp(20px,2.4vw,28px);border-top:3px solid var(--tint,var(--clay))}
-.circle h3{font-size:var(--s1);position:relative;padding-left:22px}
-.circle h3::before{content:"";position:absolute;left:0;top:.52em;width:11px;height:11px;border-radius:50%;background:var(--tint,var(--clay))}
-.circle p{color:var(--ink-soft);font-size:15px;margin-top:9px;margin-bottom:20px}
-.circle-link{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:.45em;font-weight:700;font-size:14px;color:var(--tint,var(--clay));border:1.6px solid currentColor;border-radius:var(--r-pill);padding:11px 20px;min-height:46px;transition:background .25s var(--ease),color .25s var(--ease),transform .25s var(--ease)}
-.circle-link:hover{background:var(--tint,var(--clay));color:var(--cream);transform:translateY(-2px);text-decoration:none}
-.circle-link:active,.karte:active .mehr{transform:translateY(0)}
-.circle.-women{--tint:var(--rose)}.circle.-soul{--tint:var(--clay)}.circle.-yoga{--tint:var(--sage)}
-.community-schluss{margin-top:clamp(28px,3.4vw,40px);text-align:center}
-.community-schluss p{max-width:62ch;margin-inline:auto;color:var(--ink-soft);font-size:var(--s1)}
-.community-schluss .btn{margin-top:22px}
+/* COMMUNITY — Teaser zur Unterseite */
+.com-teaser{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);align-items:center;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(24px,3vw,40px);color:inherit;transition:border-color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)}
+.com-teaser:hover{border-color:var(--clay);transform:translateY(-3px);box-shadow:0 26px 60px -40px rgba(62,46,30,.7);text-decoration:none}
+.com-teaser:active{transform:translateY(0)}
+.com-h2{display:block;font-family:var(--serif);font-weight:500;line-height:1.1;font-size:clamp(26px,2vw + 16px,38px);color:var(--ink);margin:.3em 0 .4em}
+.com-h2 em{font-style:italic;color:var(--clay)}
+.com-p{display:block;color:var(--ink-soft);font-size:var(--s1);max-width:44ch}
+.com-cta{margin-top:22px;display:inline-flex;align-items:center;justify-content:center;gap:.45em;font-weight:700;font-size:15.5px;color:var(--cocoa);border:1.6px solid currentColor;border-radius:var(--r-pill);padding:12px 22px;min-height:48px;transition:background .25s var(--ease),color .25s var(--ease)}
+.com-teaser:hover .com-cta{background:var(--cocoa);color:var(--cream)}
+.com-teaser:hover .com-cta .ar{transform:translateX(3px)}
+.com-cta .ar{transition:transform .25s var(--ease)}
+.com-bild{display:block;border-radius:var(--r);overflow:hidden}
+.com-bild img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transition:transform .5s var(--ease)}
+.js .com-teaser:hover .com-bild img{transform:scale(1.04)}
 
 /* MUSIK */
 .musik{background:var(--cocoa);color:#EFE7DE}
@@ -203,19 +202,6 @@ img,svg{display:block;max-width:100%}
 .musik-anlass .btn{margin-top:18px;border-color:rgba(246,236,224,.34);color:#EFE7DE;background:rgba(255,255,255,.07)}
 .musik-anlass .btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(199,154,78,.14)}
 
-/* HERZENS-EMPFEHLUNG — nur Überschrift, Rest klappt auf */
-#empfehlung{padding-block:clamp(30px,4.5vw,58px)}
-.empfehlung{max-width:640px;margin-inline:auto;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg)}
-.empfehlung summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.55em;padding:16px 24px;min-height:58px}
-.empfehlung summary::-webkit-details-marker{display:none}
-.empfehlung summary h2{font-family:var(--serif);font-weight:500;font-size:var(--h3);color:var(--ink);margin:0}
-.empfehlung .chev{width:14px;height:9px;flex:none;color:var(--clay);transition:transform .3s var(--ease)}
-.empfehlung[open] .chev{transform:rotate(180deg)}
-.empfehlung-inhalt{text-align:center;padding:2px clamp(20px,3.2vw,40px) clamp(26px,3.4vw,38px)}
-.tfc-logo{width:86px;height:auto;margin:0 auto 14px}
-.empfehlung p{color:var(--ink-soft);font-size:16.5px;margin-inline:auto}
-.empfehlung .code{font-family:var(--sans);font-weight:700;color:var(--ink);background:var(--sand-deep);border-radius:8px;padding:1px 8px;white-space:nowrap}
-.empfehlung .btn{margin-top:20px}
 
 /* KONTAKT */
 .kontakt{background:var(--cocoa-deep);color:#E9E0DA}
@@ -265,7 +251,9 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
   .ueber-figur{order:-1}
   .karten{grid-template-columns:1fr 1fr}
   .brand span{display:none}
-  .circles,.players{grid-template-columns:1fr}
+  .players{grid-template-columns:1fr}
+  .com-teaser{grid-template-columns:1fr}
+  .com-bild{order:-1}
 }
 @media (max-width:540px){
   .karten{grid-template-columns:1fr}
@@ -282,7 +270,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
     <a href="#retreat">Retreat</a>
     <a href="#musik">Musik</a>
     <a href="#ueber">Über mich</a>
-    <a href="#circles">Community</a>
+    <a href="community.html">Community</a>
     <a href="#kontakt" class="btn btn-primary">Kontakt aufnehmen <span class="ar">→</span></a>
   </div>
   <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
@@ -450,51 +438,17 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
 <!-- COMMUNITY / KREISE -->
 <section class="sec" id="circles" style="background:var(--sand-deep)">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow" style="justify-content:center">Meine Community</span>
-      <h2>Ein Ort zum Reinschnuppern und <em>Dazugehören.</em></h2>
-      <p style="margin-inline:auto">Unsere Community ist wie ein kleiner, ruhiger Zufluchtsort. Ein kostenfreier Raum, in dem wir uns verbinden, gemeinsam durchatmen und füreinander da sind – ganz ungezwungen, ohne Erwartungen und ohne Leistungsdruck.</p>
-    </div>
-    <figure class="community-bild reveal">
-      <img src="assets/foto-community.jpg" width="1400" height="787" loading="lazy" decoding="async" alt="Großer Kreis von Menschen, die gemeinsam auf dem Boden um Kerze und Blumen sitzen">
-    </figure>
-    <div class="circles reveal">
-      <div class="circle -women">
-        <h3>Women Circle Connection</h3>
-        <p>Meine Intention ist es, einen Raum von Frau zu Frau zu schaffen. Für ehrlichen Austausch, Wärme und das Gefühl, getragen zu werden.</p>
-        <a class="circle-link" href="https://chat.whatsapp.com/Ikc2PRRb75YJgW1POf5fPg" target="_blank" rel="noopener">Jetzt beitreten <span class="ar">↗</span></a>
-      </div>
-      <div class="circle -soul">
-        <h3>S O U L talk</h3>
-        <p>Offene Gespräche über das, was unter der Oberfläche liegt. Ein Ort zum Zuhören und Reden — von Herz zu Herz, ganz ohne Bewertung.</p>
-        <a class="circle-link" href="https://chat.whatsapp.com/JYUEWcPZJBR9OFlGcB3lRD" target="_blank" rel="noopener">Jetzt beitreten <span class="ar">↗</span></a>
-      </div>
-      <div class="circle -yoga">
-        <h3>Yoga for Peace</h3>
-        <p>Gemeinsames Yoga und Stille, um das eigene Nervensystem zu beruhigen und wieder mehr Frieden in uns selbst zu spüren.</p>
-        <a class="circle-link" href="https://chat.whatsapp.com/KUVAFU1MtCiGot0BOQxVOL" target="_blank" rel="noopener">Jetzt beitreten <span class="ar">↗</span></a>
-      </div>
-    </div>
-    <div class="community-schluss center reveal">
-      <p>Komm einfach so dazu, wie du bist. Du kannst dich ganz in Ruhe umsehen und genau in die Räume hineinspüren, die dir in diesem Moment gut tun.</p>
-    </div>
-  </div>
-</section>
-
-<!-- HERZENS-EMPFEHLUNG (Kooperation The Female Company) -->
-<section class="sec" id="empfehlung">
-  <div class="wrap">
-    <details class="empfehlung reveal">
-      <summary>
-        <h2>Für alle <em>Frauen</em></h2>
-        <svg class="chev" viewBox="0 0 14 9" aria-hidden="true"><path d="M1 1.5 7 7.5 13 1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </summary>
-      <div class="empfehlung-inhalt">
-        <img class="tfc-logo" src="assets/logo-tfc.webp" width="300" height="260" loading="lazy" decoding="async" alt="The Female Company">
-        <p>Für ein rundum geborgenes Körpergefühl an allen Tagen deines Zyklus empfehle ich dir von Herzen die nachhaltige Perioden-Unterwäsche von The Female Company – mit dem Code <b class="code">TFC_MARYLOU</b> sparst du direkt bei deiner Bestellung.</p>
-        <a class="btn btn-ghost" href="https://tfc.is/TFC_MARYLOU" target="_blank" rel="noopener">Zur Herzens-Empfehlung <span class="ar">↗</span></a>
-      </div>
-    </details>
+    <a class="com-teaser reveal" href="community.html">
+      <span class="com-txt">
+        <span class="eyebrow">Meine Community</span>
+        <span class="com-h2">Ein Ort zum Reinschnuppern und <em>Dazugehören.</em></span>
+        <span class="com-p">Kostenfreie Kreise zum Dabeisein: Women Circle Connection, S O U L talk und Yoga for Peace.</span>
+        <span class="com-cta">Zur Community <span class="ar">→</span></span>
+      </span>
+      <span class="com-bild">
+        <img src="assets/foto-community.jpg" width="1400" height="787" loading="lazy" decoding="async" alt="Großer Kreis von Menschen, die gemeinsam auf dem Boden um Kerze und Blumen sitzen">
+      </span>
+    </a>
   </div>
 </section>
 
@@ -540,7 +494,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
         <a class="brand" href="#top"><b>Mary Lou</b></a>
         <p style="margin-top:13px;max-width:36ch;color:#A08D74">Einzelbegleitung, Yoga, Frauenkreise, Retreats und Musik</p>
       </div>
-      <div><h4>Seite</h4><ul><li><a href="#angebote">Angebote</a></li><li><a href="#retreat">Retreat</a></li><li><a href="#musik">Musik</a></li><li><a href="#ueber">Über mich</a></li><li><a href="#kontakt">Kontakt</a></li></ul></div>
+      <div><h4>Seite</h4><ul><li><a href="#angebote">Angebote</a></li><li><a href="#retreat">Retreat</a></li><li><a href="#musik">Musik</a></li><li><a href="#ueber">Über mich</a></li><li><a href="community.html">Community</a></li><li><a href="#kontakt">Kontakt</a></li></ul></div>
       <div><h4>Rechtliches &amp; mehr</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li><li><a href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
     </div>
     <div class="foot-bot"><span>© 2026 Mary Lou</span><span class="made">Handgebaut von <a href="https://lechcode.de" target="_blank" rel="noopener">Lechcode</a> · cookiefrei, ohne Tracking</span></div>

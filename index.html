@@ -63,7 +63,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--clay)}
 p{max-width:64ch}
 a{color:var(--cocoa);text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:3px}
-img,svg{display:block;max-width:100%}
+img,svg{display:block;max-width:100%;height:auto}
 ::selection{background:var(--gold);color:var(--cocoa)}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
 .sec{padding-block:clamp(58px, 8vw, 116px)}
@@ -76,7 +76,7 @@ img,svg{display:block;max-width:100%}
 .center{text-align:center;margin-inline:auto}
 :focus-visible{outline:none;box-shadow:0 0 0 3px rgba(176,110,76,.5);border-radius:6px}
 
-.btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--sans);font-weight:700;font-size:15.5px;padding:14px 26px;border-radius:var(--r-pill);min-height:48px;border:1.5px solid transparent;cursor:pointer;transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s}
+.btn{display:inline-flex;align-items:center;justify-content:center;line-height:1.2;gap:.55em;font-family:var(--sans);font-weight:700;font-size:15.5px;padding:14px 26px;border-radius:var(--r-pill);min-height:48px;border:1.5px solid transparent;cursor:pointer;transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s}
 .btn .ar{transition:transform .25s var(--ease)}.btn:hover .ar{transform:translateX(3px)}
 .btn-primary{background:var(--cocoa);color:#F6EEE4;box-shadow:var(--shadow)}
 .btn-primary:hover{background:var(--cocoa-deep);transform:translateY(-2px);text-decoration:none}
@@ -291,7 +291,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
       </div>
     </div>
     <figure class="hero-photo">
-      <img class="round" src="assets/foto-hero.jpg" width="420" height="420" fetchpriority="high" alt="Mary Lou am Strand, lächelnd mit einer Blüte">
+      <img class="round" src="assets/foto-hero.jpg" width="620" height="620" fetchpriority="high" alt="Mary Lou am Strand, lächelnd mit einer Blüte">
     </figure>
   </div>
 </header>

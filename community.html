@@ -177,20 +177,14 @@ img,svg{display:block;max-width:100%;height:auto}
 
 /* INSTAGRAM-BEREICH */
 .insta{background:var(--shell);box-shadow:inset 0 1px 0 rgba(62,46,30,.07)}
-.ig-karte{display:flex;align-items:center;gap:clamp(16px,2.4vw,26px);max-width:470px;margin:clamp(26px,3.2vw,36px) auto 0;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(18px,2.2vw,24px);color:inherit;transition:border-color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)}
-.ig-karte:hover{border-color:var(--clay);transform:translateY(-2px);box-shadow:0 20px 46px -34px rgba(62,46,30,.75);text-decoration:none}
-.ig-karte:active{transform:translateY(0)}
-.ig-avatar{flex:none;display:block;width:92px;height:92px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#FEDA75,#FA7E1E,#D62976,#962FBF,#4F5BD5)}
-.ig-avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2.5px solid var(--cream)}
-.ig-info{display:block;min-width:0}
-.ig-kopf{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
-.ig-handle{font-size:17px;font-weight:700;color:var(--ink)}
-.ig-folgen{display:inline-flex;align-items:center;gap:.35em;font-size:12.5px;font-weight:700;color:var(--clay);border:1.4px solid currentColor;border-radius:var(--r-pill);padding:3px 11px}
-.ig-karte:hover .ig-folgen{background:var(--clay);color:var(--cream)}
-.ig-zahlen{display:block;margin-top:5px;font-size:13.5px;color:var(--ink-soft)}
-.ig-zahlen b{color:var(--ink)}
-.ig-name{display:block;margin-top:9px;font-size:14.5px;font-weight:700;color:var(--ink)}
-.ig-bio{display:block;margin-top:3px;font-size:13.5px;line-height:1.5;color:var(--ink-soft)}
+.ig-shot{display:block;width:min(470px,100%);margin:clamp(24px,3vw,34px) auto 0;text-align:center}
+.ig-shot img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);background:#fff;box-shadow:0 18px 44px -32px rgba(62,46,30,.7);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.ig-shot:hover img{transform:translateY(-3px);box-shadow:0 24px 52px -30px rgba(62,46,30,.8)}
+.ig-shot:active img{transform:translateY(0)}
+.ig-shot-cta{display:inline-flex;align-items:center;gap:.4em;margin-top:14px;font-weight:700;font-size:14.5px;color:var(--clay)}
+.ig-shot:hover{text-decoration:none}
+.ig-shot:hover .ig-shot-cta .ar{transform:translateX(3px)}
+.ig-shot-cta .ar{transition:transform .25s var(--ease)}
 
 /* FOOTER */
 footer{background:var(--cocoa-deep);color:#CCBBA4;padding-block:clamp(44px,6vw,66px) 30px;font-size:14.5px;border-top:1px solid rgba(255,255,255,.1)}
@@ -289,21 +283,14 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
       <h2>Einblicke aus meinem <em>Leben.</em></h2>
       <p style="margin-inline:auto">Hier teile ich, was mich gerade bewegt und was entsteht.</p>
     </div>
-    <!-- HIER: Zahlen und Bio-Zeilen pflegen, wenn sie sich aendern -->
-    <a class="ig-karte reveal" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
-      <span class="ig-avatar"><img src="assets/insta-profil.jpg" width="240" height="240" loading="lazy" decoding="async" alt="Profilbild von Mary Lou"></span>
-      <span class="ig-info">
-        <span class="ig-kopf">
-          <b class="ig-handle">maryloumusic3</b>
-          <span class="ig-folgen">Folgen <span class="ar">↗</span></span>
-        </span>
-        <span class="ig-zahlen"><b>10.700</b> Follower · <b>406</b> Gefolgt</span>
-        <span class="ig-name">Marylou | Artist &amp; Retreats</span>
-        <span class="ig-bio">✧ WE TREAT • Yoga &amp; Surf Retreats<br>🏄 Morocco | 29.10.–2.11.2026<br>📍 Austria &amp; beyond</span>
-      </span>
+    <!-- HIER: Screenshot austauschen, wenn sich Profilbild, Zahlen oder Bio aendern (Quelle: material/Instagram.png) -->
+    <a class="ig-shot reveal" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
+      <img src="assets/instagram-profil.png" width="764" height="339" loading="lazy" decoding="async" alt="Instagram-Profil maryloumusic3: Marylou | Artist &amp; Retreats — WE TREAT Yoga &amp; Surf Retreats, Morocco 29.10.–2.11.2026, Austria &amp; beyond">
+      <span class="ig-shot-cta">Auf Instagram ansehen <span class="ar">↗</span></span>
     </a>
   </div>
 </section>
+
 
 
 <!-- KOOPERATIONSPARTNER — weitere Partner einfach als zusaetzliche <article class="partner"> ergaenzen -->

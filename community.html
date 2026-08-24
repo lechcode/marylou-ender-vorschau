@@ -177,13 +177,20 @@ img,svg{display:block;max-width:100%;height:auto}
 
 /* INSTAGRAM-BEREICH */
 .insta{background:var(--shell);box-shadow:inset 0 1px 0 rgba(62,46,30,.07)}
-.insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.4vw,16px);margin-top:clamp(28px,3.4vw,40px)}
-.insta-kachel{display:block;border-radius:var(--r);overflow:hidden;position:relative;background:var(--sand-deep)}
-.insta-kachel img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .45s var(--ease)}
-.insta-kachel::after{content:"";position:absolute;inset:0;background:rgba(42,29,18,0);transition:background .3s}
-.js .insta-kachel:hover img{transform:scale(1.045)}
-.insta-kachel:hover::after{background:rgba(42,29,18,.14)}
-.insta-fuss{text-align:center;margin-top:clamp(24px,3vw,34px)}
+.ig-karte{display:flex;align-items:center;gap:clamp(16px,2.4vw,26px);max-width:470px;margin:clamp(26px,3.2vw,36px) auto 0;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(18px,2.2vw,24px);color:inherit;transition:border-color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)}
+.ig-karte:hover{border-color:var(--clay);transform:translateY(-2px);box-shadow:0 20px 46px -34px rgba(62,46,30,.75);text-decoration:none}
+.ig-karte:active{transform:translateY(0)}
+.ig-avatar{flex:none;display:block;width:92px;height:92px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#FEDA75,#FA7E1E,#D62976,#962FBF,#4F5BD5)}
+.ig-avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2.5px solid var(--cream)}
+.ig-info{display:block;min-width:0}
+.ig-kopf{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.ig-handle{font-size:17px;font-weight:700;color:var(--ink)}
+.ig-folgen{display:inline-flex;align-items:center;gap:.35em;font-size:12.5px;font-weight:700;color:var(--clay);border:1.4px solid currentColor;border-radius:var(--r-pill);padding:3px 11px}
+.ig-karte:hover .ig-folgen{background:var(--clay);color:var(--cream)}
+.ig-zahlen{display:block;margin-top:5px;font-size:13.5px;color:var(--ink-soft)}
+.ig-zahlen b{color:var(--ink)}
+.ig-name{display:block;margin-top:9px;font-size:14.5px;font-weight:700;color:var(--ink)}
+.ig-bio{display:block;margin-top:3px;font-size:13.5px;line-height:1.5;color:var(--ink-soft)}
 
 /* FOOTER */
 footer{background:var(--cocoa-deep);color:#CCBBA4;padding-block:clamp(44px,6vw,66px) 30px;font-size:14.5px;border-top:1px solid rgba(255,255,255,.1)}
@@ -212,7 +219,6 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
   .menu-open .navlinks{transform:none}.burger{display:flex;z-index:45}
   .brand span{display:none}
   .circles{grid-template-columns:1fr}
-  .insta-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:540px){
   .karten{grid-template-columns:1fr}
@@ -283,34 +289,22 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
       <h2>Einblicke aus meinem <em>Leben.</em></h2>
       <p style="margin-inline:auto">Hier teile ich, was mich gerade bewegt und was entsteht.</p>
     </div>
-    <div class="insta-grid reveal">
-      <a class="insta-kachel" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
-        <img src="assets/insta-1.jpg" width="600" height="600" loading="lazy" decoding="async" alt="Mary Lou lacht beim Gitarrespielen">
-      </a>
-      <a class="insta-kachel" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
-        <img src="assets/insta-2.jpg" width="600" height="600" loading="lazy" decoding="async" alt="Kreis von Menschen, von hinten fotografiert">
-      </a>
-      <a class="insta-kachel" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
-        <img src="assets/insta-3.jpg" width="600" height="600" loading="lazy" decoding="async" alt="Mary Lou lacht im Wasser">
-      </a>
-      <a class="insta-kachel" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
-        <img src="assets/insta-4.jpg" width="600" height="600" loading="lazy" decoding="async" alt="Gemalte Karten und Rosenblätter auf dem Boden">
-      </a>
-      <a class="insta-kachel" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
-        <img src="assets/insta-5.jpg" width="600" height="600" loading="lazy" decoding="async" alt="Mary Lou mit einem Kind im Kreis">
-      </a>
-      <a class="insta-kachel" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
-        <img src="assets/insta-6.jpg" width="600" height="600" loading="lazy" decoding="async" alt="Mary Lou spielt Gitarre neben einer Frau">
-      </a>
-    </div>
-    <div class="insta-fuss reveal">
-      <a class="btn btn-ghost" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" style="width:20px;height:20px;flex:none"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor" stroke="none"/></svg>
-        @maryloumusic3 auf Instagram <span class="ar">↗</span>
-      </a>
-    </div>
+    <!-- HIER: Zahlen und Bio-Zeilen pflegen, wenn sie sich aendern -->
+    <a class="ig-karte reveal" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
+      <span class="ig-avatar"><img src="assets/insta-profil.jpg" width="240" height="240" loading="lazy" decoding="async" alt="Profilbild von Mary Lou"></span>
+      <span class="ig-info">
+        <span class="ig-kopf">
+          <b class="ig-handle">maryloumusic3</b>
+          <span class="ig-folgen">Folgen <span class="ar">↗</span></span>
+        </span>
+        <span class="ig-zahlen"><b>10.700</b> Follower · <b>406</b> Gefolgt</span>
+        <span class="ig-name">Marylou | Artist &amp; Retreats</span>
+        <span class="ig-bio">✧ WE TREAT • Yoga &amp; Surf Retreats<br>🏄 Morocco | 29.10.–2.11.2026<br>📍 Austria &amp; beyond</span>
+      </span>
+    </a>
   </div>
 </section>
+
 
 <!-- KOOPERATIONSPARTNER — weitere Partner einfach als zusaetzliche <article class="partner"> ergaenzen -->
 <section class="sec" id="kooperationen">

@@ -179,14 +179,24 @@ img,svg{display:block;max-width:100%;height:auto}
 
 /* INSTAGRAM-BEREICH */
 .insta{background:var(--shell);box-shadow:inset 0 1px 0 rgba(62,46,30,.07)}
-.ig-shot{display:block;width:min(470px,100%);margin:clamp(24px,3vw,34px) auto 0;text-align:center}
-.ig-shot img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);background:#fff;box-shadow:0 18px 44px -32px rgba(62,46,30,.7);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
-.ig-shot:hover img{transform:translateY(-3px);box-shadow:0 24px 52px -30px rgba(62,46,30,.8)}
-.ig-shot:active img{transform:translateY(0)}
-.ig-shot-cta{display:inline-flex;align-items:center;gap:.4em;margin-top:14px;font-weight:700;font-size:14.5px;color:var(--clay)}
-.ig-shot:hover{text-decoration:none}
-.ig-shot:hover .ig-shot-cta .ar{transform:translateX(3px)}
-.ig-shot-cta .ar{transition:transform .25s var(--ease)}
+.ig-karte{display:flex;flex-direction:column;align-items:center;text-align:center;width:min(340px,100%);
+margin:clamp(26px,3.2vw,36px) auto 0;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);
+padding:clamp(26px,3vw,34px) clamp(20px,2.6vw,28px);color:inherit;
+transition:border-color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)}
+.ig-karte:hover{border-color:var(--clay);transform:translateY(-3px);box-shadow:0 24px 52px -36px rgba(62,46,30,.75);text-decoration:none}
+.ig-karte:active{transform:translateY(0)}
+.ig-avatar{display:block;width:112px;height:112px;border-radius:50%;padding:3.5px;
+background:linear-gradient(45deg,#FEDA75,#FA7E1E,#D62976,#962FBF,#4F5BD5)}
+.ig-avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid var(--cream)}
+.ig-text{display:block;margin-top:16px}
+.ig-handle{display:block;font-size:17.5px;font-weight:700;color:var(--ink)}
+.ig-name{display:block;margin-top:4px;font-size:14.5px;color:var(--ink-soft)}
+.ig-cta{margin-top:20px;display:inline-flex;align-items:center;gap:.45em;font-weight:700;font-size:14.5px;
+color:var(--clay);border:1.6px solid currentColor;border-radius:var(--r-pill);padding:11px 20px;min-height:46px;
+transition:background .25s var(--ease),color .25s var(--ease)}
+.ig-karte:hover .ig-cta{background:var(--clay);color:var(--cream)}
+.ig-karte:hover .ig-cta .ar{transform:translateX(3px)}
+.ig-cta .ar{transition:transform .25s var(--ease)}
 
 /* FOOTER */
 footer{background:var(--cocoa-deep);color:#CCBBA4;padding-block:clamp(44px,6vw,66px) 30px;font-size:14.5px;border-top:1px solid rgba(255,255,255,.1)}
@@ -285,13 +295,21 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
       <h2>Einblicke aus meinem <em>Leben.</em></h2>
       <p style="margin-inline:auto">Hier teile ich, was mich gerade bewegt und was entsteht.</p>
     </div>
-    <!-- HIER: Screenshot austauschen, wenn sich Profilbild, Zahlen oder Bio aendern (Quelle: material/Instagram.png) -->
-    <a class="ig-shot reveal" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
-      <img src="assets/instagram-profil.png" width="764" height="339" loading="lazy" decoding="async" alt="Instagram-Profil maryloumusic3: Marylou | Artist &amp; Retreats — WE TREAT Yoga &amp; Surf Retreats, Morocco 29.10.–2.11.2026, Austria &amp; beyond">
-      <span class="ig-shot-cta">Auf Instagram ansehen <span class="ar">↗</span></span>
+    <!-- HIER: Profilbild austauschen, wenn sie ihres auf Instagram wechselt (assets/insta-profilbild.jpg).
+         Bewusst OHNE Followerzahl und Bio-Zeilen — die veralten, der Rest bleibt jahrelang richtig. -->
+    <a class="ig-karte reveal" href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">
+      <span class="ig-avatar">
+        <img src="assets/insta-profilbild.jpg" width="340" height="340" loading="lazy" decoding="async" alt="Profilbild von Mary Lou auf Instagram">
+      </span>
+      <span class="ig-text">
+        <b class="ig-handle">@maryloumusic3</b>
+        <span class="ig-name">Marylou | Artist &amp; Retreats</span>
+      </span>
+      <span class="ig-cta">Auf Instagram folgen <span class="ar">↗</span></span>
     </a>
   </div>
 </section>
+
 
 
 

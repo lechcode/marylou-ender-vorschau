@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /mein-bereich.html
+Disallow: /onboarding.html
+Disallow: /uploads/
 
 Sitemap: https://marylou.at/sitemap.xml

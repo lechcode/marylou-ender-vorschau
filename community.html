@@ -58,7 +58,6 @@ img,svg{display:block;max-width:100%;height:auto}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
 .sec{padding-block:clamp(58px, 8vw, 116px)}
 .eyebrow{font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);display:inline-flex;align-items:center;gap:.7em}
-.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--clay)}
 .lede{font-size:var(--s1);color:var(--ink-soft);line-height:1.6}
 .sec-head{max-width:56ch}
 .sec-head h2{font-size:var(--h2);margin:.3em 0 .5em}
@@ -116,7 +115,7 @@ img,svg{display:block;max-width:100%;height:auto}
 
 /* MUSIK */
 .musik{background:var(--cocoa);color:#EFE7DE}
-.musik .eyebrow{color:var(--gold)}.musik .eyebrow::before{background:var(--gold)}
+.musik .eyebrow{color:var(--gold)}
 .musik .sec-head h2{color:#fff}
 .musik .sec-head p{color:#d5c8bd}
 .players{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,22px);margin-top:44px;max-width:880px;margin-inline:auto}
@@ -152,7 +151,7 @@ img,svg{display:block;max-width:100%;height:auto}
 
 /* KONTAKT */
 .kontakt{background:var(--cocoa-deep);color:#E9E0DA}
-.kontakt .eyebrow{color:var(--gold)}.kontakt .eyebrow::before{background:var(--gold)}
+.kontakt .eyebrow{color:var(--gold)}
 .kontakt h2{color:#fff;font-size:var(--h2)}
 .kontakt .sec-head{margin-inline:auto}
 .wege{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,26px);margin-top:clamp(30px,4vw,44px)}
@@ -216,14 +215,15 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
 .foto .reveal{opacity:1!important;transform:none!important}
 
 @media (max-width:1080px){
-  .brand span{display:none}
   .navlinks{gap:18px}
 }
 @media (max-width:900px){
+  .brand span{white-space:normal;font-size:8.5px;letter-spacing:.1em;line-height:1.35}
+  .brand{gap:8px;max-width:62vw}
+  .brand b{font-size:21px}
   .navlinks{position:fixed;inset:0;background:var(--cream);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .4s var(--ease);z-index:40}
   .navlinks a:not(.btn){font-size:23px;font-family:var(--serif);font-weight:600;color:var(--ink)}
   .menu-open .navlinks{transform:none}.burger{display:flex;z-index:45}
-  .brand span{display:none}
   .circles{grid-template-columns:1fr}
 }
 @media (max-width:540px){

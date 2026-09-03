@@ -91,6 +91,11 @@ img,svg{display:block;max-width:100%;height:auto}
 .navlinks a:not(.btn):hover{text-decoration:none}
 .burger{display:none;width:46px;height:46px;border:1px solid var(--line-strong);border-radius:12px;background:none;cursor:pointer;flex-direction:column;justify-content:center;gap:5px}
 .burger span{height:2px;width:20px;background:var(--ink);margin-inline:auto;transition:.3s}
+.nav-rechts{display:flex;align-items:center;gap:22px}
+.lang{display:inline-flex;align-items:center;gap:5px;font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.1em;color:var(--ink-faint);white-space:nowrap}
+.lang a{color:var(--ink-faint);padding:8px 3px;transition:color .2s}
+.lang a:hover{color:var(--clay);text-decoration:none}
+.lang a[aria-current="true"]{color:var(--ink)}
 .menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .menu-open .burger span:nth-child(2){opacity:0}
 .menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
@@ -218,6 +223,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
   .navlinks{gap:18px}
 }
 @media (max-width:900px){
+  .nav-rechts{gap:10px}
   .brand span{white-space:normal;font-size:8.5px;letter-spacing:.1em;line-height:1.35}
   .brand{gap:8px;max-width:62vw}
   .brand b{font-size:21px}
@@ -236,6 +242,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
 
 <nav class="nav" id="nav" aria-label="Hauptnavigation">
   <a class="brand" href="index.html"><img src="assets/foto-ueber.jpg" width="76" height="76" alt="" loading="eager"><span class="btxt"><b>Mary Lou</b><span>Begleitung · Musik · Retreats · Yoga · Weiblichkeit</span></span></a>
+  <div class="nav-rechts">
   <div class="navlinks" id="menu">
     <a href="index.html#angebote">Angebote</a>
     <a href="index.html#retreat">Retreat</a>
@@ -244,7 +251,9 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
     <a href="community.html" aria-current="page">Community</a>
     <a href="index.html#kontakt" class="btn btn-primary">Kontakt aufnehmen <span class="ar">→</span></a>
   </div>
+  <div class="lang" role="group" aria-label="Sprache wählen"><a href="?lang=de" data-lang="de" aria-current="true" hreflang="de">DE</a><span aria-hidden="true">·</span><a href="?lang=en" data-lang="en" aria-current="false" hreflang="en">EN</a></div>
   <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
 </nav>
 
 <main id="inhalt">
@@ -359,5 +368,6 @@ if(matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelecto
 else{document.querySelectorAll('.reveal').forEach(r=>io.observe(r))}
 </script>
 
+<script src="assets/i18n.js"></script>
 </body>
 </html>

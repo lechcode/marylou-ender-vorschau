@@ -65,7 +65,7 @@
     ['#retreat .sec-head p:nth-of-type(1)', 'Five days of yoga, surfing, music and community on Morocco’s Atlantic coast ~ my retreat in Africa, together with Katharina Eller (Yoga Vila).'],
     ['#retreat .sec-head .btn', 'All the details here <span class="ar">↗</span>'],
     ['.retreat-body h3', 'Your time out, right on the Atlantic'],
-    ['.retreat-meta span:nth-child(1) b', '29 October – 2 November 2026'],
+    ['.retreat-meta span:nth-child(1) b', '☀️ 11–16 February 2027<br>🌊 25–30 March 2027'],
     ['.retreat-meta span:nth-child(2)', 'Taghazout, Morocco'],
     ['.incl li:nth-child(1)', 'Daily yoga &amp; movement, evening circles with music &amp; meditation'],
     ['.incl li:nth-child(2)', 'Surf sessions, equipment included'],

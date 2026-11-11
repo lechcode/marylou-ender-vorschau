@@ -150,21 +150,36 @@ img,svg{display:block;max-width:100%;height:auto}
 .ueber-text h2{font-size:var(--h2);margin:.3em 0 .5em}
 .ueber-text p+p{margin-top:1em}.ueber-text .muted{color:var(--ink-soft)}
 
-/* RETREAT */
-.retreat{background:var(--cream)}
-.retreat-card{margin-top:44px;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,56px);align-items:center}
-.retreat-figur{justify-self:center}
-.retreat-poster{width:min(320px,74vw);height:auto;border-radius:var(--r-lg);border:6px solid var(--cream);box-shadow:0 24px 54px -28px rgba(62,46,30,.55)}
-.retreat-foto{display:block;margin:22px auto 0;width:min(320px,74vw);height:auto;border-radius:var(--r-lg);border:6px solid var(--cream);box-shadow:0 24px 54px -28px rgba(62,46,30,.55)}
-.retreat-body h3{font-size:var(--h3);margin-bottom:4px}
-.retreat-meta{display:flex;flex-wrap:wrap;gap:8px 16px;margin:10px 0 16px;font-size:14px;color:var(--ink-soft)}
-.retreat-meta b{color:var(--ink)}
-.incl{list-style:none;display:grid;gap:7px;margin:6px 0 20px}
-.incl li{position:relative;padding-left:24px;font-size:15px;color:var(--ink-soft)}
-.incl li::before{content:"";position:absolute;left:0;top:9px;width:12px;height:12px;border-radius:50%;border:2px solid var(--clay)}
-.retreat-cta{display:grid;gap:14px;justify-items:start}
-.retreat-cta .cta-zeile{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0}
-.retreat-cta .frage{font-size:15.5px;color:var(--ink-soft);min-width:165px}
+/* Hero-Hinweis aufs Retreat (Hauptangebot) */
+.hero-retreat{display:inline-flex;align-items:center;gap:.55em;margin-top:22px;padding:10px 18px;border-radius:var(--r-pill);background:rgba(255,255,255,.62);border:1px solid var(--line-strong);font-size:14.5px;font-weight:700;line-height:1.35;color:var(--ink);transition:border-color .25s var(--ease),color .25s var(--ease),transform .25s var(--ease)}
+.hero-retreat:hover{border-color:var(--clay);color:var(--clay);transform:translateY(-2px);text-decoration:none}
+.hero-retreat .ar{transition:transform .25s var(--ease)}.hero-retreat:hover .ar{transform:translateX(3px)}
+
+/* RETREAT — Hauptangebot, direkt nach dem Hero (Kundenwunsch 10.11.2026) */
+.retreat{background:var(--cream);box-shadow:inset 0 1px 0 rgba(62,46,30,.07)}
+.retreat-kopf{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,64px);align-items:center}
+.retreat-text h2{font-size:var(--h2);margin:.3em 0 .5em}
+.retreat-text p{font-size:var(--s1);color:var(--ink-soft)}
+.retreat-text p+p{margin-top:.9em}
+.termine{background:var(--shell);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(24px,3vw,36px);box-shadow:0 26px 60px -44px rgba(62,46,30,.6)}
+.termine h3{font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay)}
+.termin-liste{list-style:none;display:grid;gap:10px;margin:16px 0 18px}
+.termin{display:flex;align-items:center;gap:14px;padding:13px 16px;border-radius:var(--r);background:var(--sand)}
+.termin-ic{flex:none;font-size:22px;line-height:1}
+.termin b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(21px,1vw + 16px,25px);line-height:1.15;color:var(--ink)}
+.termin small{display:block;margin-top:2px;font-size:13.5px;color:var(--ink-soft)}
+.termin.-naechstes{background:var(--sand-deep)}
+.termin.-naechstes small{color:var(--clay);font-weight:700}
+.plaetze{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink-soft);margin-bottom:16px}
+.plaetze::before{content:"";flex:none;width:9px;height:9px;margin-top:8px;border-radius:50%;background:var(--clay);box-shadow:0 0 0 4px rgba(176,110,76,.18)}
+.termine .lead{font-size:15.5px;color:var(--ink);margin-bottom:16px}
+.termine-cta{display:flex;flex-wrap:wrap;gap:12px}
+.termine-cta .btn{flex:1 1 190px}
+/* Galerie: Mauerwerk aus echten Retreat-Momenten */
+.galerie{columns:3 260px;column-gap:clamp(12px,1.6vw,18px);margin-top:clamp(40px,5vw,64px)}
+.galerie figure{break-inside:avoid;margin-bottom:clamp(12px,1.6vw,18px);border-radius:var(--r-lg);overflow:hidden;background:var(--sand-deep);box-shadow:0 20px 46px -30px rgba(62,46,30,.55)}
+.galerie img{width:100%;height:auto;transition:transform .6s var(--ease)}
+.galerie figure:hover img{transform:scale(1.035)}
 
 /* COMMUNITY — Teaser zur Unterseite */
 .com-teaser{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);align-items:center;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(24px,3vw,40px);color:inherit;transition:border-color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)}
@@ -253,7 +268,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
   .navlinks{position:fixed;inset:0;background:var(--cream);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .4s var(--ease);z-index:40}
   .navlinks a:not(.btn){font-size:23px;font-family:var(--serif);font-weight:600;color:var(--ink)}
   .menu-open .navlinks{transform:none}.burger{display:flex;z-index:45}
-  .ueber-grid,.hero-grid,.retreat-card{grid-template-columns:1fr}
+  .ueber-grid,.hero-grid,.retreat-kopf{grid-template-columns:1fr}
   .wege{grid-template-columns:1fr}
   .hero-photo{order:-1}
   .ueber-figur{order:-1}
@@ -265,6 +280,9 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
   .com-teaser{grid-template-columns:1fr}
   .com-bild{order:-1}
 }
+@media (max-width:600px){
+  .galerie{columns:2}
+}
 @media (max-width:540px){
   .karten{grid-template-columns:1fr}
 }
@@ -274,11 +292,11 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
 <a href="#inhalt" class="btn" style="position:absolute;left:-9999px;top:8px;z-index:99" onfocus="this.style.left='8px'" onblur="this.style.left='-9999px'">Zum Inhalt springen</a>
 
 <nav class="nav" id="nav" aria-label="Hauptnavigation">
-  <a class="brand" href="#top"><img src="assets/foto-ueber.jpg" width="76" height="76" alt="" loading="eager"><span class="btxt"><b>Mary Lou</b><span>Begleitung · Musik · Retreats · Yoga · Weiblichkeit</span></span></a>
+  <a class="brand" href="#top"><img src="assets/foto-ueber.jpg" width="76" height="76" alt="" loading="eager"><span class="btxt"><b>Mary Lou</b><span>Retreats · Begleitung · Musik · Yoga · Weiblichkeit</span></span></a>
   <div class="nav-rechts">
   <div class="navlinks" id="menu">
-    <a href="#angebote">Angebote</a>
     <a href="#retreat">Retreat</a>
+    <a href="#angebote">Angebote</a>
     <a href="#musik">Musik</a>
     <a href="#ueber">Über mich</a>
     <a href="community.html">Community</a>
@@ -302,12 +320,56 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
         <a href="#angebote" class="btn btn-primary">Meine Angebote <span class="ar">→</span></a>
         <a href="#ueber" class="btn btn-ghost">Mehr über mich</a>
       </div>
+      <!-- HIER: Hinweis aufs nächste Retreat — bei neuen Terminen mitpflegen -->
+      <a class="hero-retreat" href="#retreat">☀️ Nächstes Retreat: 11.–16. Februar 2027 in Marokko <span class="ar">→</span></a>
     </div>
     <figure class="hero-photo">
       <img class="round" src="assets/foto-hero.jpg" width="840" height="840" fetchpriority="high" alt="Mary Lou am Strand, lächelnd mit einer Blüte">
     </figure>
   </div>
 </header>
+
+<!-- RETREAT — Hauptangebot, bewusst direkt nach dem Hero (Kundenwunsch 10.11.2026)
+     HIER: Termine, Call-Link und Warteliste pflegen. Katharina verlinken (katharinaflows.com),
+     sobald die Seite wieder erreichbar ist — Stand 11.11.2026 zeigt die Domain nur eine Wix-Fehlerseite. -->
+<section class="sec retreat" id="retreat">
+  <div class="wrap">
+    <div class="retreat-kopf">
+      <div class="retreat-text reveal">
+        <span class="eyebrow">Retreats ~ mein Herzensangebot</span>
+        <h2>WE&nbsp;·&nbsp;TREAT ~ Yoga, Surf &amp; Gemeinschaft in <em>Marokko.</em></h2>
+        <p>Fünf Tage in Taghazout an der marokkanischen Atlantikküste: Yoga und Bewegung, Surfen im Ozean, Musik am Abend und eine Gemeinschaft, in der du einfach da sein darfst.</p>
+        <p>Meine Retreats gestalte ich gemeinsam mit Katharina Eller. Das nächste findet im Februar statt.</p>
+      </div>
+      <aside class="termine reveal" aria-labelledby="termine-titel">
+        <h3 id="termine-titel">Termine 2027</h3>
+        <ul class="termin-liste">
+          <li class="termin -naechstes"><span class="termin-ic" aria-hidden="true">☀️</span><span><b>11.–16. Februar 2027</b><small>Nächstes Retreat</small></span></li>
+          <li class="termin"><span class="termin-ic" aria-hidden="true">🌊</span><span><b>25.–30. März 2027</b><small>Weiterer Termin</small></span></li>
+        </ul>
+        <p class="plaetze">Die Plätze sind begrenzt. Ist ein Termin voll, kannst du dich auf die Warteliste setzen.</p>
+        <p class="lead">Du willst dabei sein oder hast noch Fragen? Buch dir einen kurzen Call mit mir ~ ganz leicht und unkompliziert.</p>
+        <div class="termine-cta">
+          <a class="btn btn-primary" href="https://cal.com/marylouu/we-treat-connection-call-%F0%9F%A4%8D?overlayCalendar=true" target="_blank" rel="noopener">Call buchen <span class="ar">↗</span></a>
+          <a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSdUlu6GWNmH_bkZjATZJcBqxl5X-H77FXaeetTBjMF106VgiQ/viewform" target="_blank" rel="noopener">Zur Warteliste <span class="ar">↗</span></a>
+        </div>
+      </aside>
+    </div>
+    <!-- Galerie: Fotos vom WE TREAT Oktober 2026 (iCloud-Album der Kundin, Auswahl Lechcode).
+         Reihenfolge bewusst: je Spalte 1 Querformat + 2 Hochformate, damit die drei Spalten unten bündig enden. -->
+    <div class="galerie reveal" role="group" aria-label="Eindrücke vom WE TREAT Retreat in Marokko">
+      <figure><img src="assets/retreat-galerie-01.jpg" width="800" height="533" loading="lazy" decoding="async" alt="Yoga-Rückbeuge vor Felsen im warmen Abendlicht"></figure>
+      <figure><img src="assets/retreat-galerie-02.jpg" width="800" height="1200" loading="lazy" decoding="async" alt="Yoga auf der Dachterrasse, die Sonne scheint durch die erhobenen Hände"></figure>
+      <figure><img src="assets/1x0a8839-mwasvv27.jpg" width="933" height="1400" loading="lazy" decoding="async" alt="Ein Paar lehnt die Köpfe aneinander und lacht herzlich in die Kamera"></figure>
+      <figure><img src="assets/retreat-galerie-03.jpg" width="800" height="533" loading="lazy" decoding="async" alt="Gemeinsamer Kreis auf der Dachterrasse in Taghazout"></figure>
+      <figure><img src="assets/retreat-galerie-04.jpg" width="800" height="1200" loading="lazy" decoding="async" alt="Musik bei Kerzenlicht: eine Frau spielt lächelnd Gitarre"></figure>
+      <figure><img src="assets/retreat-galerie-06.jpg" width="800" height="1200" loading="lazy" decoding="async" alt="Kakao-Zeremonie: Kakao wird in Becher geschöpft, davor bunte Blumen"></figure>
+      <figure><img src="assets/retreat-galerie-07.jpg" width="800" height="1200" loading="lazy" decoding="async" alt="Zwei Frauen umarmen sich herzlich"></figure>
+      <figure><img src="assets/retreat-galerie-08.jpg" width="800" height="1200" loading="lazy" decoding="async" alt="Abendrunde auf der Dachterrasse unter dem Nachthimmel"></figure>
+      <figure><img src="assets/retreat-galerie-05.jpg" width="800" height="533" loading="lazy" decoding="async" alt="Die Gruppe gut gelaunt am Café-Tisch in Taghazout"></figure>
+    </div>
+  </div>
+</section>
 
 <!-- ANGEBOTE -->
 <section class="sec angebote" id="angebote">
@@ -318,17 +380,17 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
       <p style="margin-inline:auto">Weil echte Heilung dort beginnt, wo wir einander ohne Bewertung begegnen und nicht perfekt sein müssen.</p>
     </div>
     <div class="karten reveal">
+      <a class="karte -retreats" href="#retreat">
+        <img class="karte-photo round" src="assets/foto-angebot-retreat.jpg" width="230" height="230" loading="lazy" decoding="async" alt="Lichtdurchfluteter Retreat-Raum mit Gong, Kerze und Sitzkissen im Kreis">
+        <h3>Retreats</h3>
+        <p>Deine Auszeit in Gemeinschaft mit Yoga, meiner Musik und echter Verbindung an besonderen Orten.</p>
+        <span class="mehr">Termine 2027 <span class="ar">→</span></span>
+      </a>
       <a class="karte -begleitung" href="https://cal.com/marylouu/connection-call-3?layout=mobile&amp;overlayCalendar=true" target="_blank" rel="noopener">
         <img class="karte-photo round" src="assets/foto-angebot-einzelbegleitung.jpg" width="230" height="230" loading="lazy" decoding="async" alt="Zwei Hände halten sanft die Schultern einer sitzenden Frau">
         <h3>Einzelbegleitung</h3>
         <p>Dein sicherer Hafen. Durch tiefes Zuhören, Atem und Klang schaffen wir wieder Raum für deine innere Stimme und deine ureigene Kraft.</p>
         <span class="mehr">Anfragen <span class="ar">↗</span></span>
-      </a>
-      <a class="karte -retreats" href="#retreat">
-        <img class="karte-photo round" src="assets/foto-angebot-retreat.jpg" width="230" height="230" loading="lazy" decoding="async" alt="Lichtdurchfluteter Retreat-Raum mit Gong, Kerze und Sitzkissen im Kreis">
-        <h3>Retreats</h3>
-        <p>Deine Auszeit in Gemeinschaft mit Yoga, meiner Musik und echter Verbindung an besonderen Orten.</p>
-        <span class="mehr">WE TREAT Morocco 2026 <span class="ar">→</span></span>
       </a>
       <a class="karte -yoga" href="https://chat.whatsapp.com/KUVAFU1MtCiGot0BOQxVOL" target="_blank" rel="noopener">
         <img class="karte-photo round" src="assets/foto-angebot-yoga.jpg" width="230" height="230" loading="lazy" decoding="async" alt="Mary Lou in einer Yoga-Haltung auf einer Sanddüne im Sonnenuntergang">
@@ -412,43 +474,6 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
   </div>
 </section>
 
-<!-- RETREAT -->
-<section class="sec retreat" id="retreat">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Nächstes Retreat</span>
-      <h2>WE&nbsp;·&nbsp;TREAT ~ Taghazout, <em>Marokko.</em></h2>
-      <p>Fünf Tage Yoga, Surf, Musik und Gemeinschaft an der marokkanischen Atlantikküste ~ mein Retreat in Afrika, zusammen mit Katharina Eller (Yoga Vila).</p>
-      <p style="margin-top:22px"><a class="btn btn-ghost" href="assets/we-treat-morocco-2026.pdf" target="_blank" rel="noopener" aria-label="Alle Details findest Du hier — PDF öffnen">Alle Details findest Du hier <span class="ar">↗</span></a></p>
-    </div>
-    <div class="retreat-card reveal">
-      <figure class="retreat-figur">
-        <img class="retreat-poster" src="assets/foto-retreat-marokko.jpg" width="430" height="651" loading="lazy" decoding="async" alt="Plakat zum WE TREAT Morocco Retreat: Yoga, Surf, Flow, Connect, Community — fünf Tage Ozean und Bewegung">
-        <img class="retreat-foto" src="assets/1x0a8839-mwasvv27.jpg" width="933" height="1400" loading="lazy" decoding="async" alt="Ein Paar lehnt die Köpfe aneinander und lacht herzlich in die Kamera">
-      </figure>
-      <div class="retreat-body">
-        <h3>Deine Auszeit direkt am Atlantik</h3>
-        <div class="retreat-meta">
-          <span><b>☀️ 11.–16. Februar 2027</b><br><b>🌊 25.–30. März 2027</b></span>
-          <span>Taghazout, Marokko</span>
-        </div>
-        <ul class="incl">
-          <li>Tägliches Yoga &amp; Movement, Abendkreise mit Musik &amp; Meditation</li>
-          <li>Surf-Sessions inkl. Ausrüstung</li>
-          <li>Brunch &amp; Dinner, Übernachtung im Ocean House mit Meerblick</li>
-          <li>Echte Gemeinschaft ~ kein vollgepackter Plan, sondern Raum für dich</li>
-        </ul>
-        <div class="retreat-cta">
-          <p class="cta-zeile"><span class="frage">Du willst dabei sein?</span>
-            <a class="btn btn-primary" href="https://docs.google.com/forms/d/1OnkaX29IbUD5W-C50QZjsny9Nk46oHukPqZKQqSkqfA/viewform" target="_blank" rel="noopener">Hier anmelden <span class="ar">↗</span></a></p>
-          <p class="cta-zeile"><span class="frage">Du hast noch Fragen?</span>
-            <a class="btn btn-ghost" href="https://cal.com/marylouu/we-treat-connection-call-%F0%9F%A4%8D" target="_blank" rel="noopener">Lass uns sprechen <span class="ar">↗</span></a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- COMMUNITY / KREISE -->
 <section class="sec" id="circles" style="background:var(--sand-deep)">
   <div class="wrap">
@@ -487,7 +512,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
         <p>Schreib mir in Ruhe ~ ich melde mich persönlich bei dir zurück.</p>
         <span class="weg-cta">maryloumusic42@gmail.com <span class="ar">→</span></span>
       </a>
-      <a class="weg" href="https://cal.com/marylouu/connection-call-3?layout=mobile&amp;overlayCalendar=true" target="_blank" rel="noopener">
+      <a class="weg" href="https://cal.com/marylouu?redirect=false" target="_blank" rel="noopener">
         <span class="weg-ic" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.9" y="4.6" width="18.2" height="16.8" rx="3.4"/><path d="M2.9 9.6h18.2M8 2.6v4M16 2.6v4" stroke-linecap="round"/></svg>
         </span>
@@ -508,7 +533,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#CCBBA4}footer a:h
         <a class="brand" href="#top"><b>Mary Lou</b></a>
         <p style="margin-top:13px;max-width:36ch;color:#A08D74">Einzelbegleitung, Yoga, Frauenkreise, Retreats und Musik</p>
       </div>
-      <div><h4>Seite</h4><ul><li><a href="#angebote">Angebote</a></li><li><a href="#retreat">Retreat</a></li><li><a href="#musik">Musik</a></li><li><a href="#ueber">Über mich</a></li><li><a href="community.html">Community</a></li><li><a href="#kontakt">Kontakt</a></li></ul></div>
+      <div><h4>Seite</h4><ul><li><a href="#retreat">Retreat</a></li><li><a href="#angebote">Angebote</a></li><li><a href="#musik">Musik</a></li><li><a href="#ueber">Über mich</a></li><li><a href="community.html">Community</a></li><li><a href="#kontakt">Kontakt</a></li></ul></div>
       <div><h4>Rechtliches &amp; mehr</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li><li><a href="https://www.instagram.com/maryloumusic3/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
     </div>
     <div class="foot-bot"><span>© 2026 Mary Lou</span><span class="made">Gebaut von <a href="https://lechcode.de" target="_blank" rel="noopener">Lechcode</a>, cookiefrei &amp; ohne Tracking</span></div>

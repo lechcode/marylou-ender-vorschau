@@ -12,7 +12,7 @@
      Modus 'text' -> nur der erste Textknoten (für Buttons mit Icon) */
   var EN = [
     /* Navigation & Marke */
-    ['.brand .btxt > span', 'Guidance · Music · Retreats · Yoga · Femininity'],
+    ['.brand .btxt > span', 'Retreats · Guidance · Music · Yoga · Femininity'],
     ['.navlinks a[href$="#angebote"]', 'What I offer'],
     ['.navlinks a[href$="#retreat"]', 'Retreat'],
     ['.navlinks a[href$="#musik"]', 'Music'],
@@ -25,6 +25,22 @@
     ['.hero .lede', 'I walk alongside you for part of your journey. In my spaces you can come home to yourself again ~ and show up with all of who you are: every facet, your voice, your feelings.'],
     ['.hero-cta .btn-primary', 'What I offer <span class="ar">→</span>'],
     ['.hero-cta .btn-ghost', 'More about me'],
+    ['.hero-retreat', '☀️ Next retreat: 11–16 February 2027 in Morocco <span class="ar">→</span>'],
+
+    /* Retreat (Hauptangebot, direkt nach dem Hero) */
+    ['#retreat .eyebrow', 'Retreats ~ closest to my heart'],
+    ['.retreat-text h2', 'WE&nbsp;·&nbsp;TREAT ~ Yoga, surf &amp; community in <em>Morocco.</em>'],
+    ['.retreat-text p:nth-of-type(1)', 'Five days in Taghazout on Morocco’s Atlantic coast: yoga and movement, surfing the ocean, music in the evenings, and a community where you can simply be.'],
+    ['.retreat-text p:nth-of-type(2)', 'I host my retreats together with Katharina Eller. The next one takes place in February.'],
+    ['#termine-titel', 'Dates 2027'],
+    ['.termin:nth-child(1) b', '11–16 February 2027'],
+    ['.termin:nth-child(1) small', 'Next retreat'],
+    ['.termin:nth-child(2) b', '25–30 March 2027'],
+    ['.termin:nth-child(2) small', 'Another date'],
+    ['.plaetze', 'Places are limited. If a date is full, you can join the waiting list.'],
+    ['.termine .lead', 'Want to join, or still have questions? Book a short call with me ~ easy and relaxed.'],
+    ['.termine-cta .btn-primary', 'Book a call <span class="ar">↗</span>'],
+    ['.termine-cta .btn-ghost', 'Join the waiting list <span class="ar">↗</span>'],
 
     /* Angebote */
     ['#angebote .eyebrow', 'What I offer'],
@@ -35,7 +51,7 @@
     ['.karte.-begleitung .mehr', 'Reach out <span class="ar">↗</span>'],
     ['.karte.-retreats h3', 'Retreats'],
     ['.karte.-retreats p', 'Time away, in good company ~ yoga, my music and real connection in beautiful places.'],
-    ['.karte.-retreats .mehr', 'WE TREAT Morocco 2026 <span class="ar">→</span>'],
+    ['.karte.-retreats .mehr', 'Dates 2027 <span class="ar">→</span>'],
     ['.karte.-yoga h3', 'Yoga'],
     ['.karte.-yoga p', 'Through gentle, grounding Yin Yoga, I invite you to journey deep into your body ~ one-to-one or in a group.'],
     ['.karte.-yoga .mehr', 'Join the yoga group <span class="ar">↗</span>'],
@@ -58,23 +74,6 @@
     ['.ueber-text p:nth-of-type(1)', 'Music has always been so much more to me than a beautiful sound ~ it’s my own way back to myself, my anchor, and the most honest language I have.'],
     ['.ueber-text p:nth-of-type(2)', 'Over the years I’ve experienced how deeply sound can heal when it’s woven together with mindful bodywork and breathwork. That’s why I bring music together with Yin Yoga, breathwork and the power of conscious community. To me, these aren’t just methods ~ they’re gentle tools that help us quiet the noise of the world and come all the way home to our own bodies.'],
     ['.ueber-text p:nth-of-type(3)', 'Today I accompany people on exactly that journey home to themselves: in one-to-one sessions, on multi-day retreats and in nourishing women’s circles. What matters most to me is holding a calm, safe space ~ a place with no pressure to perform, where every emotion is welcome, masks can come off, and every voice is truly heard.'],
-
-    /* Retreat */
-    ['#retreat .eyebrow', 'Next retreat'],
-    ['#retreat .sec-head h2', 'WE&nbsp;·&nbsp;TREAT ~ Taghazout, <em>Morocco.</em>'],
-    ['#retreat .sec-head p:nth-of-type(1)', 'Five days of yoga, surfing, music and community on Morocco’s Atlantic coast ~ my retreat in Africa, together with Katharina Eller (Yoga Vila).'],
-    ['#retreat .sec-head .btn', 'All the details here <span class="ar">↗</span>'],
-    ['.retreat-body h3', 'Your time out, right on the Atlantic'],
-    ['.retreat-meta span:nth-child(1) b', '☀️ 11–16 February 2027<br>🌊 25–30 March 2027'],
-    ['.retreat-meta span:nth-child(2)', 'Taghazout, Morocco'],
-    ['.incl li:nth-child(1)', 'Daily yoga &amp; movement, evening circles with music &amp; meditation'],
-    ['.incl li:nth-child(2)', 'Surf sessions, equipment included'],
-    ['.incl li:nth-child(3)', 'Brunch &amp; dinner, and your stay at the Ocean House with sea views'],
-    ['.incl li:nth-child(4)', 'Real community ~ no packed schedule, just space for you'],
-    ['.retreat-cta .cta-zeile:nth-child(1) .frage', 'Want to join us?'],
-    ['.retreat-cta .cta-zeile:nth-child(1) .btn', 'Sign up here <span class="ar">↗</span>'],
-    ['.retreat-cta .cta-zeile:nth-child(2) .frage', 'Got questions?'],
-    ['.retreat-cta .cta-zeile:nth-child(2) .btn', 'Let’s talk <span class="ar">↗</span>'],
 
     /* Community-Teaser (Startseite) */
     ['#circles .eyebrow', 'My community'],
@@ -131,7 +130,16 @@
     ['#burger', 'aria-label', 'Open menu'],
     ['.lang', 'aria-label', 'Choose language'],
     ['.hero-photo img', 'alt', 'Mary Lou on the beach, smiling, a flower in her hand'],
-    ['#retreat .sec-head .btn', 'aria-label', 'All the details here — opens PDF'],
+    ['.galerie', 'aria-label', 'Moments from the WE TREAT retreat in Morocco'],
+    ['.galerie figure:nth-child(1) img', 'alt', 'Yoga backbend in front of rocks in warm evening light'],
+    ['.galerie figure:nth-child(2) img', 'alt', 'Yoga on the rooftop, sunlight shining through raised hands'],
+    ['.galerie figure:nth-child(3) img', 'alt', 'A couple leaning their heads together, laughing into the camera'],
+    ['.galerie figure:nth-child(4) img', 'alt', 'Sitting together in a circle on the rooftop in Taghazout'],
+    ['.galerie figure:nth-child(5) img', 'alt', 'Music by candlelight: a woman smiling as she plays the guitar'],
+    ['.galerie figure:nth-child(6) img', 'alt', 'Cacao ceremony: cacao being ladled into cups, colourful flowers in front'],
+    ['.galerie figure:nth-child(7) img', 'alt', 'Two women sharing a warm hug'],
+    ['.galerie figure:nth-child(8) img', 'alt', 'Evening circle on the rooftop under the night sky'],
+    ['.galerie figure:nth-child(9) img', 'alt', 'The group in high spirits around a café table in Taghazout'],
     ['.embed-load[data-yt="pUsuwRtbtDU"]', 'aria-label', 'Load and play the YouTube video: Love in Wrong Places'],
     ['.embed-load[data-yt="2egmas7aCOo"]', 'aria-label', 'Load and play the YouTube video: Inner Child']
   ];

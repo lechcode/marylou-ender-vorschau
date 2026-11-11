@@ -30,7 +30,7 @@
     /* Retreat (Hauptangebot, direkt nach dem Hero) */
     ['#retreat .eyebrow', 'Retreats ~ closest to my heart'],
     ['.retreat-text h2', 'WE&nbsp;·&nbsp;TREAT ~ Yoga, surf &amp; community in <em>Morocco.</em>'],
-    ['.retreat-text p:nth-of-type(1)', 'Five days in Taghazout on Morocco’s Atlantic coast: yoga and movement, surfing the ocean, music in the evenings, and a community where you can simply be.'],
+    ['.retreat-text p:nth-of-type(1)', 'Five days of retreat in North Africa, Morocco: yoga and movement, surfing the ocean, music in the evenings, and a community where you can simply be.'],
     ['.retreat-text p:nth-of-type(2)', 'I host my retreats together with Katharina Eller. The next one takes place in February.'],
     ['#termine-titel', 'Dates 2027'],
     ['.termin:nth-child(1) b', '11–16 February 2027'],
@@ -134,12 +134,12 @@
     ['.galerie figure:nth-child(1) img', 'alt', 'Yoga backbend in front of rocks in warm evening light'],
     ['.galerie figure:nth-child(2) img', 'alt', 'Yoga on the rooftop, sunlight shining through raised hands'],
     ['.galerie figure:nth-child(3) img', 'alt', 'A couple leaning their heads together, laughing into the camera'],
-    ['.galerie figure:nth-child(4) img', 'alt', 'Sitting together in a circle on the rooftop in Taghazout'],
+    ['.galerie figure:nth-child(4) img', 'alt', 'Sitting together in a circle on a rooftop in Morocco'],
     ['.galerie figure:nth-child(5) img', 'alt', 'Music by candlelight: a woman smiling as she plays the guitar'],
     ['.galerie figure:nth-child(6) img', 'alt', 'Cacao ceremony: cacao being ladled into cups, colourful flowers in front'],
     ['.galerie figure:nth-child(7) img', 'alt', 'Two women sharing a warm hug'],
     ['.galerie figure:nth-child(8) img', 'alt', 'Evening circle on the rooftop under the night sky'],
-    ['.galerie figure:nth-child(9) img', 'alt', 'The group in high spirits around a café table in Taghazout'],
+    ['.galerie figure:nth-child(9) img', 'alt', 'The group in high spirits around a café table in Morocco'],
     ['.embed-load[data-yt="pUsuwRtbtDU"]', 'aria-label', 'Load and play the YouTube video: Love in Wrong Places'],
     ['.embed-load[data-yt="2egmas7aCOo"]', 'aria-label', 'Load and play the YouTube video: Inner Child']
   ];
